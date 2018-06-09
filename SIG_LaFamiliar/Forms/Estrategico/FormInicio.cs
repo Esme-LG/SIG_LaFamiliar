@@ -12,9 +12,9 @@ using MaterialSkin.Controls;
 
 namespace SIG_LaFamiliar.Forms.Estrategico
 {
-    public partial class frmInicioEstrategico : MaterialForm
+    public partial class FrmInicioEstrategico : MaterialForm
     {
-        public frmInicioEstrategico()
+        public FrmInicioEstrategico()
         {
             InitializeComponent();
         }
