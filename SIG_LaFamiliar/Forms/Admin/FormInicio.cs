@@ -12,9 +12,9 @@ using MaterialSkin.Controls;
 
 namespace SIG_LaFamiliar.Forms.Admin
 {
-    public partial class frmInicioAdmin : MaterialForm
+    public partial class FrmInicioAdmin : MaterialForm
     {
-        public frmInicioAdmin()
+        public FrmInicioAdmin()
         {
             InitializeComponent();
 
@@ -30,17 +30,6 @@ namespace SIG_LaFamiliar.Forms.Admin
                 TextShade.WHITE
             );
 
-            pnlOpciones.Visible = false;
-        }
-
-        private void btnUsuarios_MouseEnter(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = true;
-        }
-
-        private void pnlOpciones_MouseLeave(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = false;
         }
 
     }
