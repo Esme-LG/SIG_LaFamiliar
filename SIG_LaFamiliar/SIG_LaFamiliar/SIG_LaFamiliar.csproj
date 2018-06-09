@@ -71,6 +71,12 @@
     <Compile Include="Forms\Tactico\FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tactico\FormMorososVigentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tactico\FormMorososVigentes.Designer.cs">
+      <DependentUpon>FormMorososVigentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormLogin.resx">
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tactico\FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tactico\FormMorososVigentes.resx">
+      <DependentUpon>FormMorososVigentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
