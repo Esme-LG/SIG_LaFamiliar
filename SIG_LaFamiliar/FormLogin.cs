@@ -34,7 +34,7 @@ namespace SIG_LaFamiliar
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Forms.Tactico.FormMorososVigentes frm = new Forms.Tactico.FormMorososVigentes();
+            Forms.Tactico.FrmInicioTactico frm = new Forms.Tactico.FrmInicioTactico();
             frm.Show();
         }
     }

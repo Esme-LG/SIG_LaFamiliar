@@ -12,9 +12,9 @@ using MaterialSkin.Controls;
 
 namespace SIG_LaFamiliar.Forms.Tactico
 {
-    public partial class frmInicioTactico : MaterialForm
+    public partial class FrmInicioTactico : MaterialForm
     {
-        public frmInicioTactico()
+        public FrmInicioTactico()
         {
             InitializeComponent();
 
@@ -30,37 +30,8 @@ namespace SIG_LaFamiliar.Forms.Tactico
                 TextShade.WHITE
             );
 
-            pnlOpciones.Visible = false;
         }
 
-        private void btnMorosos_MouseEnter(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = true;
-        }
-
-        private void pnlOpciones_MouseLeave(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = false;
-        }
-
-        private void pnlOpciones_MouseEnter(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = true; 
-        }
-
-        private void btnVigentes_MouseEnter(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = true;
-        }
-
-        private void btnHistoricos_MouseEnter(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = true;
-        }
-
-        private void btnPorTipoCredito_MouseEnter(object sender, EventArgs e)
-        {
-            pnlOpciones.Visible = true;
-        }
+        
     }
 }
