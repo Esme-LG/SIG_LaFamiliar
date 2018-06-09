@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
-namespace SIG_LaFamiliar
+namespace SIG_LaFamiliar.Forms.Admin
 {
-    public partial class frmLogin : MaterialForm
+    public partial class frmInicioAdmin : MaterialForm
     {
-        public frmLogin()
+        public frmInicioAdmin()
         {
             InitializeComponent();
 
@@ -29,13 +29,19 @@ namespace SIG_LaFamiliar
                 Primary.LightGreen200, Accent.LightGreen200,
                 TextShade.WHITE
             );
+
+            pnlOpciones.Visible = false;
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void btnUsuarios_MouseEnter(object sender, EventArgs e)
         {
-            this.Hide();
-            Forms.Estrategico.frmInicioEstrategico frm = new Forms.Estrategico.frmInicioEstrategico();
-            frm.Show();
+            pnlOpciones.Visible = true;
         }
+
+        private void pnlOpciones_MouseLeave(object sender, EventArgs e)
+        {
+            pnlOpciones.Visible = false;
+        }
+
     }
 }
