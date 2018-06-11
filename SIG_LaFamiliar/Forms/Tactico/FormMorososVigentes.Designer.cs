@@ -396,6 +396,7 @@
             this.btnWordDoc.Size = new System.Drawing.Size(40, 40);
             this.btnWordDoc.TabIndex = 46;
             this.btnWordDoc.UseVisualStyleBackColor = true;
+            this.btnWordDoc.Click += new System.EventHandler(this.btnWordDoc_Click);
             // 
             // btnPDFDoc
             // 
