@@ -172,8 +172,13 @@ namespace SIG_LaFamiliar.Forms.Tactico
             wrdRng.InsertParagraphAfter();
             wrdRng.InsertAfter("THE END.");
 
-            oDoc.SaveAs2("Ejemplo", Word.WdSaveFormat.wdFormatDocumentDefault);
-            oDoc.SaveAs2("Ejemplo", Word.WdSaveFormat.wdFormatPDF );
+            oDoc.SaveAs2("Ejemplo-", Word.WdSaveFormat.wdFormatDocumentDefault);
+            oDoc.SaveAs2("Ejemplo-", Word.WdSaveFormat.wdFormatPDF );
+
+            oDoc.PrintOut(ref oMissing, ref oMissing,
+            ref oMissing, ref oMissing);
+            oDoc.Close();
+            oWord.Quit(ref oMissing, ref oMissing, ref oMissing);
         }
 
         private void FormMorososVigentes_FormClosing(object sender, FormClosingEventArgs e)
