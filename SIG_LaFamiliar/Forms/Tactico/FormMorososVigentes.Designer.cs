@@ -37,6 +37,7 @@
             this.nudMinCredito = new System.Windows.Forms.NumericUpDown();
             this.txtAsociado = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.materialCheckBox4 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialCheckBox3 = new MaterialSkin.Controls.MaterialCheckBox();
             this.materialCheckBox2 = new MaterialSkin.Controls.MaterialCheckBox();
@@ -51,6 +52,10 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.lblID = new MaterialSkin.Controls.MaterialLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.btnWordDoc = new System.Windows.Forms.Button();
+            this.btnPDFDoc = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.dgvVigentes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asociado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,11 +71,7 @@
             this.btnMorososVigentes = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxMora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinMora)).BeginInit();
@@ -168,6 +169,17 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(122, 26);
             this.txtID.TabIndex = 44;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.Location = new System.Drawing.Point(870, 175);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(40, 40);
+            this.btnBuscar.TabIndex = 43;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // materialCheckBox4
             // 
@@ -354,15 +366,56 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnExcel);
+            this.panel2.Controls.Add(this.btnWordDoc);
+            this.panel2.Controls.Add(this.btnPDFDoc);
             this.panel2.Controls.Add(this.btnImprimir);
             this.panel2.Controls.Add(this.dgvVigentes);
             this.panel2.Location = new System.Drawing.Point(235, 374);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(937, 414);
             this.panel2.TabIndex = 50;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.excel;
+            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExcel.Location = new System.Drawing.Point(732, 14);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(40, 40);
+            this.btnExcel.TabIndex = 47;
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnWordDoc
+            // 
+            this.btnWordDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.word;
+            this.btnWordDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWordDoc.Location = new System.Drawing.Point(778, 14);
+            this.btnWordDoc.Name = "btnWordDoc";
+            this.btnWordDoc.Size = new System.Drawing.Size(40, 40);
+            this.btnWordDoc.TabIndex = 46;
+            this.btnWordDoc.UseVisualStyleBackColor = true;
+            // 
+            // btnPDFDoc
+            // 
+            this.btnPDFDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.pdf;
+            this.btnPDFDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPDFDoc.Location = new System.Drawing.Point(824, 14);
+            this.btnPDFDoc.Name = "btnPDFDoc";
+            this.btnPDFDoc.Size = new System.Drawing.Size(40, 40);
+            this.btnPDFDoc.TabIndex = 45;
+            this.btnPDFDoc.UseVisualStyleBackColor = true;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.print;
+            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimir.Location = new System.Drawing.Point(870, 14);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(40, 40);
+            this.btnImprimir.TabIndex = 44;
+            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // dgvVigentes
             // 
@@ -409,16 +462,16 @@
             // pnlEspacio
             // 
             this.pnlEspacio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
-            this.pnlEspacio.Location = new System.Drawing.Point(1, 629);
+            this.pnlEspacio.Location = new System.Drawing.Point(1, 684);
             this.pnlEspacio.Name = "pnlEspacio";
-            this.pnlEspacio.Size = new System.Drawing.Size(211, 171);
+            this.pnlEspacio.Size = new System.Drawing.Size(211, 116);
             this.pnlEspacio.TabIndex = 58;
             // 
             // btnMorososTipo
             // 
             this.btnMorososTipo.Depth = 0;
             this.btnMorososTipo.Font = new System.Drawing.Font("Bradley Hand ITC", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMorososTipo.Location = new System.Drawing.Point(0, 348);
+            this.btnMorososTipo.Location = new System.Drawing.Point(0, 404);
             this.btnMorososTipo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMorososTipo.Name = "btnMorososTipo";
             this.btnMorososTipo.Primary = true;
@@ -431,7 +484,7 @@
             // 
             this.btnMorososHistorios.Depth = 0;
             this.btnMorososHistorios.Font = new System.Drawing.Font("Bradley Hand ITC", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMorososHistorios.Location = new System.Drawing.Point(0, 292);
+            this.btnMorososHistorios.Location = new System.Drawing.Point(0, 348);
             this.btnMorososHistorios.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMorososHistorios.Name = "btnMorososHistorios";
             this.btnMorososHistorios.Primary = true;
@@ -444,7 +497,7 @@
             // 
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Font = new System.Drawing.Font("Bradley Hand ITC", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialRaisedButton1.Location = new System.Drawing.Point(0, 516);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(0, 572);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -457,7 +510,7 @@
             // 
             this.materialRaisedButton2.Depth = 0;
             this.materialRaisedButton2.Font = new System.Drawing.Font("Bradley Hand ITC", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialRaisedButton2.Location = new System.Drawing.Point(0, 460);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(0, 516);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -470,7 +523,7 @@
             // 
             this.materialRaisedButton3.Depth = 0;
             this.materialRaisedButton3.Font = new System.Drawing.Font("Bradley Hand ITC", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialRaisedButton3.Location = new System.Drawing.Point(0, 404);
+            this.materialRaisedButton3.Location = new System.Drawing.Point(0, 460);
             this.materialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton3.Name = "materialRaisedButton3";
             this.materialRaisedButton3.Primary = true;
@@ -483,7 +536,7 @@
             // 
             this.btnMorososVigentes.Depth = 0;
             this.btnMorososVigentes.Font = new System.Drawing.Font("Bradley Hand ITC", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMorososVigentes.Location = new System.Drawing.Point(0, 236);
+            this.btnMorososVigentes.Location = new System.Drawing.Point(0, 292);
             this.btnMorososVigentes.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMorososVigentes.Name = "btnMorososVigentes";
             this.btnMorososVigentes.Primary = true;
@@ -507,69 +560,32 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 573);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 629);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(211, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // btnInicio
             // 
-            this.button3.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.excel;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(732, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(40, 40);
-            this.button3.TabIndex = 47;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.word;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(778, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(40, 40);
-            this.button2.TabIndex = 46;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.pdf;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(824, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 45;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.print;
-            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnImprimir.Location = new System.Drawing.Point(870, 14);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(40, 40);
-            this.btnImprimir.TabIndex = 44;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(870, 175);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 40);
-            this.btnBuscar.TabIndex = 43;
-            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnInicio.Depth = 0;
+            this.btnInicio.Font = new System.Drawing.Font("Bradley Hand ITC", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(0, 236);
+            this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Primary = true;
+            this.btnInicio.Size = new System.Drawing.Size(212, 55);
+            this.btnInicio.TabIndex = 60;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
             // 
             // FormMorososVigentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pnlEspacio);
             this.Controls.Add(this.btnMorososTipo);
@@ -587,6 +603,7 @@
             this.Name = "FormMorososVigentes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMorososVigentes_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxMora)).EndInit();
@@ -642,8 +659,9 @@
         private System.Windows.Forms.NumericUpDown nudMinCredito;
         private System.Windows.Forms.TextBox txtAsociado;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnWordDoc;
+        private System.Windows.Forms.Button btnPDFDoc;
+        private System.Windows.Forms.Button btnExcel;
+        private MaterialSkin.Controls.MaterialRaisedButton btnInicio;
     }
 }
