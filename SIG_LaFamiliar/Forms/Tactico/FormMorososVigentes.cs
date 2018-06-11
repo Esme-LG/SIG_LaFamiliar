@@ -35,6 +35,48 @@ namespace SIG_LaFamiliar.Forms.Tactico
 
         }
 
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Form form = new Forms.Tactico.FormInicioTactico();
+            form.Show();
+            this.Close();
+        }
+
+        private void btnMorososHistoricos_Click(object sender, EventArgs e)
+        {
+            Form form = new Forms.Tactico.FormMorososHistorico();
+            form.Show();
+            this.Close();
+        }
+
+        private void btnMorososTipo_Click(object sender, EventArgs e)
+        {
+            Form form = new Forms.Tactico.FormMorososCreditos();
+            form.Show();
+            this.Close();
+        }
+
+        private void btnProyeccion_Click(object sender, EventArgs e)
+        {
+            Form form = new Forms.Tactico.FormProyeccion();
+            form.Show();
+            this.Close();
+        }
+
+        private void btnAsociados_Click(object sender, EventArgs e)
+        {
+            Form form = new Forms.Tactico.FormAsociadosCategoria();
+            form.Show();
+            this.Close();
+        }
+
+        private void btnCreditos_Click(object sender, EventArgs e)
+        {
+            Form form = new Forms.Tactico.FormCreditosCompletados();
+            form.Show();
+            this.Close();
+        }
+
         static void DisplayInExcel(IEnumerable<Account> accounts)
         {
             var excelApp = new Excel.Application();
@@ -207,6 +249,7 @@ namespace SIG_LaFamiliar.Forms.Tactico
             CreateIconInWordDoc();
         }
     }
+
     public class Account
     {
         public int ID { get; set; }
