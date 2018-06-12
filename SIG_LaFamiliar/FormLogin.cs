@@ -12,9 +12,9 @@ using MaterialSkin.Controls;
 
 namespace SIG_LaFamiliar
 {
-    public partial class frmLogin : MaterialForm
+    public partial class FormLogin : MaterialForm
     {
-        public frmLogin()
+        public FormLogin()
         {
             InitializeComponent();
 
@@ -29,11 +29,27 @@ namespace SIG_LaFamiliar
                 Primary.LightGreen200, Accent.LightGreen200,
                 TextShade.WHITE
             );
+
+            Proveedor.formMain = this;
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Forms.Tactico.FormInicioTactico form = new Forms.Tactico.FormInicioTactico();            
+            Form form;
+
+            switch (txtNombre.Text)
+            {
+                case "t":
+                    form = new Forms.Tactico.FormInicioTactico();
+                    break;
+                case "e":
+                    form = new Forms.Estrategico.FormInicioEstrategico();
+                    break;
+                default:
+                    form = new Forms.Admin.FormInicioAdmin();
+                    break;
+            }
+
             form.Show();
             this.Hide();
         }

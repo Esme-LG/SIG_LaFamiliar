@@ -225,7 +225,7 @@ namespace SIG_LaFamiliar.Forms.Tactico
 
         private void FormMorososVigentes_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //this.Close();
+            Proveedor.formMain.Close();
         }
 
         private void btnExcel_Click(object sender, EventArgs e)
@@ -247,6 +247,17 @@ namespace SIG_LaFamiliar.Forms.Tactico
         private void btnWordDoc_Click(object sender, EventArgs e)
         {
             CreateIconInWordDoc();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Proveedor.formMain.Show();
+            this.Close();
+        }
+
+        private void FormMorososVigentes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
         }
     }
 

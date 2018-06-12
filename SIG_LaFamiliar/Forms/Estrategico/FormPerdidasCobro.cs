@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
-namespace SIG_LaFamiliar.Forms.Tactico
+namespace SIG_LaFamiliar.Forms.Estrategico
 {
-    public partial class FormMorososHistorico : MaterialForm
+    public partial class FormPerdidasCobro : MaterialForm
     {
-        public FormMorososHistorico()
+        public FormPerdidasCobro()
         {
             InitializeComponent();
 
@@ -29,47 +29,39 @@ namespace SIG_LaFamiliar.Forms.Tactico
                 Primary.LightGreen200, Accent.LightGreen200,
                 TextShade.WHITE
             );
-
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormInicioTactico();
+            Form form = new Forms.Estrategico.FormInicioEstrategico();
             form.Show();
             this.Close();
         }
 
-        private void btnMorososVigentes_Click(object sender, EventArgs e)
+        private void btnIndice_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormMorososVigentes();
+            Form form = new Forms.Estrategico.FormIndice();
             form.Show();
             this.Close();
         }
 
-        private void btnMorososTipo_Click(object sender, EventArgs e)
+        private void btnPerdidasAsociados_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormMorososCreditos();
+            Form form = new Forms.Estrategico.FormPerdidasAsociados();
             form.Show();
             this.Close();
         }
 
-        private void btnProyeccion_Click(object sender, EventArgs e)
+        private void btnMorosos_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormProyeccion();
+            Form form = new Forms.Estrategico.FormMorososCuota();
             form.Show();
             this.Close();
         }
 
-        private void btnAsociados_Click(object sender, EventArgs e)
+        private void btnRecuperacion_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormAsociadosCategoria();
-            form.Show();
-            this.Close();
-        }
-
-        private void btnCreditos_Click(object sender, EventArgs e)
-        {
-            Form form = new Forms.Tactico.FormCreditosCompletados();
+            Form form = new Forms.Estrategico.FormRecuperacion();
             form.Show();
             this.Close();
         }
@@ -80,10 +72,9 @@ namespace SIG_LaFamiliar.Forms.Tactico
             this.Close();
         }
 
-        private void FormMorososHistorico_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormPerdidasCobro_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
         }
-        
     }
 }

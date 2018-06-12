@@ -56,7 +56,7 @@
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.dgvVigentes = new System.Windows.Forms.DataGridView();
+            this.tblVigentes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asociado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +70,7 @@
             this.btnProyeccion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnMorososVigentes = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pcbSalir = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxMora)).BeginInit();
@@ -78,16 +78,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxCredito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinCredito)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVigentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblVigentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(271, 15);
+            this.label1.Location = new System.Drawing.Point(269, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 23);
@@ -412,7 +412,7 @@
             this.panel2.Controls.Add(this.btnWordDoc);
             this.panel2.Controls.Add(this.btnPDFDoc);
             this.panel2.Controls.Add(this.btnImprimir);
-            this.panel2.Controls.Add(this.dgvVigentes);
+            this.panel2.Controls.Add(this.tblVigentes);
             this.panel2.Location = new System.Drawing.Point(176, 304);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
@@ -465,24 +465,24 @@
             this.btnImprimir.TabIndex = 44;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
-            // dgvVigentes
+            // tblVigentes
             // 
-            this.dgvVigentes.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
-            this.dgvVigentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVigentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVigentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tblVigentes.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
+            this.tblVigentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblVigentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblVigentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Asociado,
             this.Categoría,
             this.Valoractual,
             this.Categoria});
-            this.dgvVigentes.Location = new System.Drawing.Point(20, 63);
-            this.dgvVigentes.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvVigentes.Name = "dgvVigentes";
-            this.dgvVigentes.RowHeadersVisible = false;
-            this.dgvVigentes.RowTemplate.Height = 24;
-            this.dgvVigentes.Size = new System.Drawing.Size(670, 252);
-            this.dgvVigentes.TabIndex = 0;
+            this.tblVigentes.Location = new System.Drawing.Point(20, 63);
+            this.tblVigentes.Margin = new System.Windows.Forms.Padding(2);
+            this.tblVigentes.Name = "tblVigentes";
+            this.tblVigentes.RowHeadersVisible = false;
+            this.tblVigentes.RowTemplate.Height = 24;
+            this.tblVigentes.Size = new System.Drawing.Size(670, 252);
+            this.tblVigentes.TabIndex = 0;
             // 
             // ID
             // 
@@ -512,17 +512,18 @@
             // pnlEspacio
             // 
             this.pnlEspacio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
-            this.pnlEspacio.Location = new System.Drawing.Point(1, 556);
+            this.pnlEspacio.Location = new System.Drawing.Point(0, 559);
             this.pnlEspacio.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEspacio.Name = "pnlEspacio";
-            this.pnlEspacio.Size = new System.Drawing.Size(158, 94);
+            this.pnlEspacio.Size = new System.Drawing.Size(158, 81);
             this.pnlEspacio.TabIndex = 58;
             // 
             // btnMorososTipo
             // 
+            this.btnMorososTipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososTipo.Depth = 0;
-            this.btnMorososTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMorososTipo.Location = new System.Drawing.Point(0, 328);
+            this.btnMorososTipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososTipo.Location = new System.Drawing.Point(0, 329);
             this.btnMorososTipo.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososTipo.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnMorososTipo.Name = "btnMorososTipo";
@@ -535,8 +536,9 @@
             // 
             // btnMorososHistoricos
             // 
+            this.btnMorososHistoricos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososHistoricos.Depth = 0;
-            this.btnMorososHistoricos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososHistoricos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososHistoricos.Location = new System.Drawing.Point(0, 283);
             this.btnMorososHistoricos.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososHistoricos.MouseState = MaterialSkin.MouseState.HOVER;
@@ -550,9 +552,10 @@
             // 
             // btnCreditosCompletos
             // 
+            this.btnCreditosCompletos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreditosCompletos.Depth = 0;
-            this.btnCreditosCompletos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreditosCompletos.Location = new System.Drawing.Point(0, 465);
+            this.btnCreditosCompletos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreditosCompletos.Location = new System.Drawing.Point(0, 467);
             this.btnCreditosCompletos.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreditosCompletos.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCreditosCompletos.Name = "btnCreditosCompletos";
@@ -565,9 +568,10 @@
             // 
             // btnAsociadosCategoria
             // 
+            this.btnAsociadosCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAsociadosCategoria.Depth = 0;
-            this.btnAsociadosCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsociadosCategoria.Location = new System.Drawing.Point(0, 419);
+            this.btnAsociadosCategoria.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsociadosCategoria.Location = new System.Drawing.Point(0, 421);
             this.btnAsociadosCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsociadosCategoria.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAsociadosCategoria.Name = "btnAsociadosCategoria";
@@ -580,9 +584,10 @@
             // 
             // btnProyeccion
             // 
+            this.btnProyeccion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProyeccion.Depth = 0;
-            this.btnProyeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProyeccion.Location = new System.Drawing.Point(0, 374);
+            this.btnProyeccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProyeccion.Location = new System.Drawing.Point(0, 375);
             this.btnProyeccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnProyeccion.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnProyeccion.Name = "btnProyeccion";
@@ -596,8 +601,7 @@
             // btnMorososVigentes
             // 
             this.btnMorososVigentes.Depth = 0;
-            this.btnMorososVigentes.Enabled = false;
-            this.btnMorososVigentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososVigentes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososVigentes.Location = new System.Drawing.Point(0, 237);
             this.btnMorososVigentes.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososVigentes.MouseState = MaterialSkin.MouseState.HOVER;
@@ -620,23 +624,26 @@
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
             // 
-            // pcbSalir
+            // btnSalir
             // 
-            this.pcbSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
-            this.pcbSalir.Image = ((System.Drawing.Image)(resources.GetObject("pcbSalir.Image")));
-            this.pcbSalir.Location = new System.Drawing.Point(1, 511);
-            this.pcbSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.pcbSalir.Name = "pcbSalir";
-            this.pcbSalir.Size = new System.Drawing.Size(158, 44);
-            this.pcbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pcbSalir.TabIndex = 55;
-            this.pcbSalir.TabStop = false;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(0, 513);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(158, 44);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnSalir.TabIndex = 55;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnInicio
             // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Depth = 0;
-            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(0, 192);
+            this.btnInicio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(0, 191);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInicio.Name = "btnInicio";
@@ -657,7 +664,7 @@
             this.Controls.Add(this.pnlEspacio);
             this.Controls.Add(this.btnMorososTipo);
             this.Controls.Add(this.btnMorososHistoricos);
-            this.Controls.Add(this.pcbSalir);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCreditosCompletos);
             this.Controls.Add(this.btnAsociadosCategoria);
             this.Controls.Add(this.btnProyeccion);
@@ -670,9 +677,10 @@
             this.MaximumSize = new System.Drawing.Size(900, 640);
             this.MinimumSize = new System.Drawing.Size(900, 640);
             this.Name = "FormMorososVigentes";
+            this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMorososVigentes_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMorososVigentes_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxMora)).EndInit();
@@ -680,9 +688,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxCredito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinCredito)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVigentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblVigentes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -707,7 +715,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.DataGridView dgvVigentes;
+        private System.Windows.Forms.DataGridView tblVigentes;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asociado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoría;
@@ -716,7 +724,7 @@
         private System.Windows.Forms.Panel pnlEspacio;
         private MaterialSkin.Controls.MaterialRaisedButton btnMorososTipo;
         private MaterialSkin.Controls.MaterialRaisedButton btnMorososHistoricos;
-        private System.Windows.Forms.PictureBox pcbSalir;
+        private System.Windows.Forms.PictureBox btnSalir;
         private MaterialSkin.Controls.MaterialRaisedButton btnCreditosCompletos;
         private MaterialSkin.Controls.MaterialRaisedButton btnAsociadosCategoria;
         private MaterialSkin.Controls.MaterialRaisedButton btnProyeccion;

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
-namespace SIG_LaFamiliar.Forms.Tactico
+namespace SIG_LaFamiliar.Forms.Admin
 {
-    public partial class FormMorososHistorico : MaterialForm
+    public partial class FormUsuarios : MaterialForm
     {
-        public FormMorososHistorico()
+        public FormUsuarios()
         {
             InitializeComponent();
 
@@ -34,42 +34,21 @@ namespace SIG_LaFamiliar.Forms.Tactico
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormInicioTactico();
+            Form form = new Forms.Admin.FormInicioAdmin();
             form.Show();
             this.Close();
         }
 
-        private void btnMorososVigentes_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormMorososVigentes();
+            Form form = new Forms.Admin.FormNuevoUsuario();
             form.Show();
             this.Close();
         }
 
-        private void btnMorososTipo_Click(object sender, EventArgs e)
+        private void btnBitacora_Click(object sender, EventArgs e)
         {
-            Form form = new Forms.Tactico.FormMorososCreditos();
-            form.Show();
-            this.Close();
-        }
-
-        private void btnProyeccion_Click(object sender, EventArgs e)
-        {
-            Form form = new Forms.Tactico.FormProyeccion();
-            form.Show();
-            this.Close();
-        }
-
-        private void btnAsociados_Click(object sender, EventArgs e)
-        {
-            Form form = new Forms.Tactico.FormAsociadosCategoria();
-            form.Show();
-            this.Close();
-        }
-
-        private void btnCreditos_Click(object sender, EventArgs e)
-        {
-            Form form = new Forms.Tactico.FormCreditosCompletados();
+            Form form = new Forms.Admin.FormBitacora();
             form.Show();
             this.Close();
         }
@@ -80,10 +59,10 @@ namespace SIG_LaFamiliar.Forms.Tactico
             this.Close();
         }
 
-        private void FormMorososHistorico_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormInicioAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
         }
-        
+
     }
 }

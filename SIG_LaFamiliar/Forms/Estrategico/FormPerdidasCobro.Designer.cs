@@ -1,6 +1,6 @@
-﻿namespace SIG_LaFamiliar.Forms.Tactico
+﻿namespace SIG_LaFamiliar.Forms.Estrategico
 {
-    partial class FormAsociadosCategoria
+    partial class FormPerdidasCobro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAsociadosCategoria));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPerdidasCobro));
             this.btnSalir = new System.Windows.Forms.PictureBox();
-            this.btnCreditos = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnAsociados = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnProyeccion = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnMorososVigentes = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnRecuperacion = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnMorosos = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnPerdidas = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnIndice = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
-            this.btnMorososHistoricos = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnMorososTipo = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnPerdidasAsociados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pnlEspacio = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnExcel = new System.Windows.Forms.Button();
@@ -58,90 +57,90 @@
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(0, 513);
+            this.btnSalir.Location = new System.Drawing.Point(0, 468);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(158, 44);
+            this.btnSalir.Size = new System.Drawing.Size(158, 45);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnSalir.TabIndex = 21;
+            this.btnSalir.TabIndex = 29;
             this.btnSalir.TabStop = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnCreditos
+            // btnRecuperacion
             // 
-            this.btnCreditos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreditos.Depth = 0;
-            this.btnCreditos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreditos.Location = new System.Drawing.Point(0, 467);
-            this.btnCreditos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCreditos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnCreditos.Name = "btnCreditos";
-            this.btnCreditos.Primary = true;
-            this.btnCreditos.Size = new System.Drawing.Size(159, 45);
-            this.btnCreditos.TabIndex = 20;
-            this.btnCreditos.Text = "Créditos morosos completados";
-            this.btnCreditos.UseVisualStyleBackColor = true;
-            this.btnCreditos.Click += new System.EventHandler(this.btnCreditos_Click);
+            this.btnRecuperacion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecuperacion.Depth = 0;
+            this.btnRecuperacion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperacion.Location = new System.Drawing.Point(0, 422);
+            this.btnRecuperacion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRecuperacion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnRecuperacion.Name = "btnRecuperacion";
+            this.btnRecuperacion.Primary = true;
+            this.btnRecuperacion.Size = new System.Drawing.Size(159, 45);
+            this.btnRecuperacion.TabIndex = 28;
+            this.btnRecuperacion.Text = "Recuperación";
+            this.btnRecuperacion.UseVisualStyleBackColor = true;
+            this.btnRecuperacion.Click += new System.EventHandler(this.btnRecuperacion_Click);
             // 
-            // btnAsociados
+            // btnMorosos
             // 
-            this.btnAsociados.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAsociados.Depth = 0;
-            this.btnAsociados.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsociados.Location = new System.Drawing.Point(0, 421);
-            this.btnAsociados.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAsociados.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAsociados.Name = "btnAsociados";
-            this.btnAsociados.Primary = true;
-            this.btnAsociados.Size = new System.Drawing.Size(159, 45);
-            this.btnAsociados.TabIndex = 19;
-            this.btnAsociados.Text = "Asociados por categoría";
-            this.btnAsociados.UseVisualStyleBackColor = true;
+            this.btnMorosos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMorosos.Depth = 0;
+            this.btnMorosos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorosos.Location = new System.Drawing.Point(0, 376);
+            this.btnMorosos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMorosos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnMorosos.Name = "btnMorosos";
+            this.btnMorosos.Primary = true;
+            this.btnMorosos.Size = new System.Drawing.Size(159, 45);
+            this.btnMorosos.TabIndex = 27;
+            this.btnMorosos.Text = "Morosos por cuota";
+            this.btnMorosos.UseVisualStyleBackColor = true;
+            this.btnMorosos.Click += new System.EventHandler(this.btnMorosos_Click);
             // 
-            // btnProyeccion
+            // btnPerdidas
             // 
-            this.btnProyeccion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProyeccion.Depth = 0;
-            this.btnProyeccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProyeccion.Location = new System.Drawing.Point(0, 375);
-            this.btnProyeccion.Margin = new System.Windows.Forms.Padding(2);
-            this.btnProyeccion.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnProyeccion.Name = "btnProyeccion";
-            this.btnProyeccion.Primary = true;
-            this.btnProyeccion.Size = new System.Drawing.Size(159, 45);
-            this.btnProyeccion.TabIndex = 18;
-            this.btnProyeccion.Text = "Proyección de pagos";
-            this.btnProyeccion.UseVisualStyleBackColor = true;
-            this.btnProyeccion.Click += new System.EventHandler(this.btnProyeccion_Click);
+            this.btnPerdidas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnPerdidas.Depth = 0;
+            this.btnPerdidas.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerdidas.Location = new System.Drawing.Point(0, 284);
+            this.btnPerdidas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPerdidas.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPerdidas.Name = "btnPerdidas";
+            this.btnPerdidas.Primary = true;
+            this.btnPerdidas.Size = new System.Drawing.Size(159, 45);
+            this.btnPerdidas.TabIndex = 26;
+            this.btnPerdidas.Text = "Perdidas por falta de cobro";
+            this.btnPerdidas.UseVisualStyleBackColor = true;
             // 
-            // btnMorososVigentes
+            // btnIndice
             // 
-            this.btnMorososVigentes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMorososVigentes.Depth = 0;
-            this.btnMorososVigentes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMorososVigentes.Location = new System.Drawing.Point(0, 237);
-            this.btnMorososVigentes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMorososVigentes.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMorososVigentes.Name = "btnMorososVigentes";
-            this.btnMorososVigentes.Primary = true;
-            this.btnMorososVigentes.Size = new System.Drawing.Size(159, 45);
-            this.btnMorososVigentes.TabIndex = 17;
-            this.btnMorososVigentes.Text = "Morosos vigentes";
-            this.btnMorososVigentes.UseVisualStyleBackColor = true;
-            this.btnMorososVigentes.Click += new System.EventHandler(this.btnMorososVigentes_Click);
+            this.btnIndice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIndice.Depth = 0;
+            this.btnIndice.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIndice.Location = new System.Drawing.Point(0, 238);
+            this.btnIndice.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIndice.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnIndice.Name = "btnIndice";
+            this.btnIndice.Primary = true;
+            this.btnIndice.Size = new System.Drawing.Size(159, 45);
+            this.btnIndice.TabIndex = 25;
+            this.btnIndice.Text = "índice de morosidad";
+            this.btnIndice.UseVisualStyleBackColor = true;
+            this.btnIndice.Click += new System.EventHandler(this.btnIndice_Click);
             // 
             // btnInicio
             // 
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Depth = 0;
             this.btnInicio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(0, 191);
+            this.btnInicio.Location = new System.Drawing.Point(0, 192);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Primary = true;
             this.btnInicio.Size = new System.Drawing.Size(159, 45);
-            this.btnInicio.TabIndex = 16;
+            this.btnInicio.TabIndex = 24;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -155,49 +154,33 @@
             this.pcbLogo.Name = "pcbLogo";
             this.pcbLogo.Size = new System.Drawing.Size(158, 126);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbLogo.TabIndex = 15;
+            this.pcbLogo.TabIndex = 23;
             this.pcbLogo.TabStop = false;
             // 
-            // btnMorososHistoricos
+            // btnPerdidasAsociados
             // 
-            this.btnMorososHistoricos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMorososHistoricos.Depth = 0;
-            this.btnMorososHistoricos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMorososHistoricos.Location = new System.Drawing.Point(0, 283);
-            this.btnMorososHistoricos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMorososHistoricos.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMorososHistoricos.Name = "btnMorososHistoricos";
-            this.btnMorososHistoricos.Primary = true;
-            this.btnMorososHistoricos.Size = new System.Drawing.Size(159, 45);
-            this.btnMorososHistoricos.TabIndex = 23;
-            this.btnMorososHistoricos.Text = "Morosos históricos";
-            this.btnMorososHistoricos.UseVisualStyleBackColor = true;
-            this.btnMorososHistoricos.Click += new System.EventHandler(this.btnMorososHistoricos_Click);
-            // 
-            // btnMorososTipo
-            // 
-            this.btnMorososTipo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMorososTipo.Depth = 0;
-            this.btnMorososTipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMorososTipo.Location = new System.Drawing.Point(0, 329);
-            this.btnMorososTipo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMorososTipo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnMorososTipo.Name = "btnMorososTipo";
-            this.btnMorososTipo.Primary = true;
-            this.btnMorososTipo.Size = new System.Drawing.Size(159, 45);
-            this.btnMorososTipo.TabIndex = 24;
-            this.btnMorososTipo.Text = "Morosos por tipo de crédito";
-            this.btnMorososTipo.UseVisualStyleBackColor = true;
-            this.btnMorososTipo.Click += new System.EventHandler(this.btnMorososTipo_Click);
+            this.btnPerdidasAsociados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerdidasAsociados.Depth = 0;
+            this.btnPerdidasAsociados.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerdidasAsociados.Location = new System.Drawing.Point(0, 330);
+            this.btnPerdidasAsociados.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPerdidasAsociados.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnPerdidasAsociados.Name = "btnPerdidasAsociados";
+            this.btnPerdidasAsociados.Primary = true;
+            this.btnPerdidasAsociados.Size = new System.Drawing.Size(159, 45);
+            this.btnPerdidasAsociados.TabIndex = 31;
+            this.btnPerdidasAsociados.Text = "Perdidas por asociados";
+            this.btnPerdidasAsociados.UseVisualStyleBackColor = true;
+            this.btnPerdidasAsociados.Click += new System.EventHandler(this.btnPerdidasAsociados_Click);
             // 
             // pnlEspacio
             // 
             this.pnlEspacio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
-            this.pnlEspacio.Location = new System.Drawing.Point(0, 559);
+            this.pnlEspacio.Location = new System.Drawing.Point(0, 514);
             this.pnlEspacio.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEspacio.Name = "pnlEspacio";
-            this.pnlEspacio.Size = new System.Drawing.Size(158, 81);
-            this.pnlEspacio.TabIndex = 25;
+            this.pnlEspacio.Size = new System.Drawing.Size(158, 126);
+            this.pnlEspacio.TabIndex = 32;
             // 
             // panel2
             // 
@@ -210,7 +193,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(703, 336);
-            this.panel2.TabIndex = 54;
+            this.panel2.TabIndex = 56;
             // 
             // btnExcel
             // 
@@ -265,7 +248,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(703, 204);
-            this.panel1.TabIndex = 53;
+            this.panel1.TabIndex = 55;
             // 
             // btnBuscar
             // 
@@ -283,14 +266,14 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(241, 15);
+            this.label1.Location = new System.Drawing.Point(229, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 23);
+            this.label1.Size = new System.Drawing.Size(245, 23);
             this.label1.TabIndex = 29;
-            this.label1.Text = "Asociados por categoría";
+            this.label1.Text = "Pérdidas por falta de cobro";
             // 
-            // FormAsociadosCategoria
+            // FormPerdidasCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -298,13 +281,12 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlEspacio);
-            this.Controls.Add(this.btnMorososTipo);
-            this.Controls.Add(this.btnMorososHistoricos);
+            this.Controls.Add(this.btnPerdidasAsociados);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnCreditos);
-            this.Controls.Add(this.btnAsociados);
-            this.Controls.Add(this.btnProyeccion);
-            this.Controls.Add(this.btnMorososVigentes);
+            this.Controls.Add(this.btnRecuperacion);
+            this.Controls.Add(this.btnMorosos);
+            this.Controls.Add(this.btnPerdidas);
+            this.Controls.Add(this.btnIndice);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.pcbLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -312,11 +294,11 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(900, 640);
             this.MinimumSize = new System.Drawing.Size(900, 640);
-            this.Name = "FormAsociadosCategoria";
+            this.Name = "FormPerdidasCobro";
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAsociadosCategoria_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPerdidasCobro_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -329,14 +311,13 @@
         #endregion
 
         private System.Windows.Forms.PictureBox btnSalir;
-        private MaterialSkin.Controls.MaterialRaisedButton btnCreditos;
-        private MaterialSkin.Controls.MaterialRaisedButton btnAsociados;
-        private MaterialSkin.Controls.MaterialRaisedButton btnProyeccion;
-        private MaterialSkin.Controls.MaterialRaisedButton btnMorososVigentes;
+        private MaterialSkin.Controls.MaterialRaisedButton btnRecuperacion;
+        private MaterialSkin.Controls.MaterialRaisedButton btnMorosos;
+        private MaterialSkin.Controls.MaterialRaisedButton btnPerdidas;
+        private MaterialSkin.Controls.MaterialRaisedButton btnIndice;
         private MaterialSkin.Controls.MaterialRaisedButton btnInicio;
         private System.Windows.Forms.PictureBox pcbLogo;
-        private MaterialSkin.Controls.MaterialRaisedButton btnMorososHistoricos;
-        private MaterialSkin.Controls.MaterialRaisedButton btnMorososTipo;
+        private MaterialSkin.Controls.MaterialRaisedButton btnPerdidasAsociados;
         private System.Windows.Forms.Panel pnlEspacio;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnExcel;
