@@ -74,6 +74,11 @@ namespace SIG_LaFamiliar.Forms.Tactico
             this.Close();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
 
     }
 }
