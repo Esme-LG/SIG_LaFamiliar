@@ -77,6 +77,20 @@ namespace SIG_LaFamiliar.Forms.Tactico
             this.Close();
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Proveedor.formMain.Show();
+            this.Close();
+        }
+
+        private void FormMorososVigentes_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
+
+
+        // ==========================================================================================
+
         static void DisplayInExcel(IEnumerable<Account> accounts)
         {
             var excelApp = new Excel.Application();
@@ -223,11 +237,6 @@ namespace SIG_LaFamiliar.Forms.Tactico
             oWord.Quit(ref oMissing, ref oMissing, ref oMissing);
         }
 
-        private void FormMorososVigentes_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Proveedor.formMain.Close();
-        }
-
         private void btnExcel_Click(object sender, EventArgs e)
         {
             // Create a list of accounts.
@@ -247,17 +256,6 @@ namespace SIG_LaFamiliar.Forms.Tactico
         private void btnWordDoc_Click(object sender, EventArgs e)
         {
             CreateIconInWordDoc();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Proveedor.formMain.Show();
-            this.Close();
-        }
-
-        private void FormMorososVigentes_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
         }
     }
 

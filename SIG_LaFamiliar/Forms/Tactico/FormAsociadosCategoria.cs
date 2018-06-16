@@ -74,11 +74,15 @@ namespace SIG_LaFamiliar.Forms.Tactico
             this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-
+            Proveedor.formMain.Show();
+            this.Close();
         }
 
-
+        private void FormAsociadosCategoria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
     }
 }
