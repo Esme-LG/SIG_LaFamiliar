@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMorososVigentes));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,7 +40,7 @@
             this.nudMaxCredito = new System.Windows.Forms.NumericUpDown();
             this.nudMinCredito = new System.Windows.Forms.NumericUpDown();
             this.txtAsociado = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtIdAsociado = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.ckbCategoriaF = new MaterialSkin.Controls.MaterialCheckBox();
             this.ckbCategoriaD = new MaterialSkin.Controls.MaterialCheckBox();
@@ -90,11 +90,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(265, 15);
+            this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(269, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 24);
+            this.label1.Size = new System.Drawing.Size(165, 23);
             this.label1.TabIndex = 29;
             this.label1.Text = "Morosos vigentes";
             // 
@@ -106,7 +106,7 @@
             this.panel1.Controls.Add(this.nudMaxCredito);
             this.panel1.Controls.Add(this.nudMinCredito);
             this.panel1.Controls.Add(this.txtAsociado);
-            this.panel1.Controls.Add(this.txtID);
+            this.panel1.Controls.Add(this.txtIdAsociado);
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.ckbCategoriaF);
             this.panel1.Controls.Add(this.ckbCategoriaD);
@@ -197,14 +197,14 @@
             this.txtAsociado.Size = new System.Drawing.Size(298, 26);
             this.txtAsociado.TabIndex = 45;
             // 
-            // txtID
+            // txtIdAsociado
             // 
-            this.txtID.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(121, 61);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(92, 26);
-            this.txtID.TabIndex = 44;
+            this.txtIdAsociado.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdAsociado.Location = new System.Drawing.Point(121, 61);
+            this.txtIdAsociado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdAsociado.Name = "txtIdAsociado";
+            this.txtIdAsociado.Size = new System.Drawing.Size(92, 26);
+            this.txtIdAsociado.TabIndex = 44;
             // 
             // btnBuscar
             // 
@@ -222,8 +222,8 @@
             // 
             this.ckbCategoriaF.AutoSize = true;
             this.ckbCategoriaF.Depth = 0;
-            this.ckbCategoriaF.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbCategoriaF.Location = new System.Drawing.Point(584, 158);
+            this.ckbCategoriaF.Font = new System.Drawing.Font("Roboto", 10F);
+            this.ckbCategoriaF.Location = new System.Drawing.Point(582, 158);
             this.ckbCategoriaF.Margin = new System.Windows.Forms.Padding(0);
             this.ckbCategoriaF.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ckbCategoriaF.MouseState = MaterialSkin.MouseState.HOVER;
@@ -238,7 +238,7 @@
             // 
             this.ckbCategoriaD.AutoSize = true;
             this.ckbCategoriaD.Depth = 0;
-            this.ckbCategoriaD.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbCategoriaD.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbCategoriaD.Location = new System.Drawing.Point(537, 158);
             this.ckbCategoriaD.Margin = new System.Windows.Forms.Padding(0);
             this.ckbCategoriaD.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -254,7 +254,7 @@
             // 
             this.ckbCategoriaC.AutoSize = true;
             this.ckbCategoriaC.Depth = 0;
-            this.ckbCategoriaC.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbCategoriaC.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbCategoriaC.Location = new System.Drawing.Point(582, 128);
             this.ckbCategoriaC.Margin = new System.Windows.Forms.Padding(0);
             this.ckbCategoriaC.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -270,7 +270,7 @@
             // 
             this.ckbCategoriaB.AutoSize = true;
             this.ckbCategoriaB.Depth = 0;
-            this.ckbCategoriaB.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbCategoriaB.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbCategoriaB.Location = new System.Drawing.Point(537, 128);
             this.ckbCategoriaB.Margin = new System.Windows.Forms.Padding(0);
             this.ckbCategoriaB.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -473,14 +473,14 @@
             // 
             this.tblVigentes.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
             this.tblVigentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblVigentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblVigentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tblVigentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblVigentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -488,28 +488,28 @@
             this.Categoría,
             this.Valoractual,
             this.Categoria});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblVigentes.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblVigentes.DefaultCellStyle = dataGridViewCellStyle2;
             this.tblVigentes.Location = new System.Drawing.Point(20, 63);
             this.tblVigentes.Margin = new System.Windows.Forms.Padding(2);
             this.tblVigentes.Name = "tblVigentes";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblVigentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblVigentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tblVigentes.RowHeadersVisible = false;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tblVigentes.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblVigentes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.tblVigentes.RowTemplate.Height = 24;
             this.tblVigentes.Size = new System.Drawing.Size(670, 252);
             this.tblVigentes.TabIndex = 0;
@@ -756,7 +756,7 @@
         private System.Windows.Forms.NumericUpDown nudMaxCredito;
         private System.Windows.Forms.NumericUpDown nudMinCredito;
         private System.Windows.Forms.TextBox txtAsociado;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtIdAsociado;
         private System.Windows.Forms.Button btnWordDoc;
         private System.Windows.Forms.Button btnPDFDoc;
         private System.Windows.Forms.Button btnExcel;

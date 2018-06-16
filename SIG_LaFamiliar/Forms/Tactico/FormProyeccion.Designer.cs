@@ -342,7 +342,7 @@
             // 
             this.rdbPlazo.AutoSize = true;
             this.rdbPlazo.Depth = 0;
-            this.rdbPlazo.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rdbPlazo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbPlazo.Location = new System.Drawing.Point(155, 145);
             this.rdbPlazo.Margin = new System.Windows.Forms.Padding(0);
             this.rdbPlazo.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -359,7 +359,7 @@
             // 
             this.rdbCuota.AutoSize = true;
             this.rdbCuota.Depth = 0;
-            this.rdbCuota.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rdbCuota.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbCuota.Location = new System.Drawing.Point(155, 102);
             this.rdbCuota.Margin = new System.Windows.Forms.Padding(0);
             this.rdbCuota.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -416,7 +416,7 @@
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(652, 142);
+            this.btnBuscar.Location = new System.Drawing.Point(597, 139);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
@@ -440,7 +440,7 @@
             // 
             this.lblCredito.AutoSize = true;
             this.lblCredito.Depth = 0;
-            this.lblCredito.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblCredito.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCredito.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblCredito.Location = new System.Drawing.Point(220, 64);
             this.lblCredito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -453,11 +453,11 @@
             // lblProyeccion
             // 
             this.lblProyeccion.AutoSize = true;
-            this.lblProyeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProyeccion.Location = new System.Drawing.Point(271, 15);
+            this.lblProyeccion.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProyeccion.Location = new System.Drawing.Point(256, 15);
             this.lblProyeccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProyeccion.Name = "lblProyeccion";
-            this.lblProyeccion.Size = new System.Drawing.Size(208, 24);
+            this.lblProyeccion.Size = new System.Drawing.Size(191, 23);
             this.lblProyeccion.TabIndex = 29;
             this.lblProyeccion.Text = "Proyección de pagos";
             // 

@@ -135,7 +135,7 @@
             this.tblCategoría.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -148,7 +148,7 @@
             this.Categoría});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -159,7 +159,7 @@
             this.tblCategoría.Name = "tblCategoría";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -210,7 +210,7 @@
             // 
             this.ckbOpcionF.AutoSize = true;
             this.ckbOpcionF.Depth = 0;
-            this.ckbOpcionF.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbOpcionF.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbOpcionF.Location = new System.Drawing.Point(410, 110);
             this.ckbOpcionF.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionF.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -226,7 +226,7 @@
             // 
             this.ckbOpcionD.AutoSize = true;
             this.ckbOpcionD.Depth = 0;
-            this.ckbOpcionD.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbOpcionD.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbOpcionD.Location = new System.Drawing.Point(360, 110);
             this.ckbOpcionD.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionD.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -242,7 +242,7 @@
             // 
             this.ckbOpcionC.AutoSize = true;
             this.ckbOpcionC.Depth = 0;
-            this.ckbOpcionC.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbOpcionC.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbOpcionC.Location = new System.Drawing.Point(310, 110);
             this.ckbOpcionC.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionC.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -258,7 +258,7 @@
             // 
             this.ckbOpcionB.AutoSize = true;
             this.ckbOpcionB.Depth = 0;
-            this.ckbOpcionB.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbOpcionB.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbOpcionB.Location = new System.Drawing.Point(260, 110);
             this.ckbOpcionB.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionB.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -274,7 +274,7 @@
             // 
             this.ckbOpcionA.AutoSize = true;
             this.ckbOpcionA.Depth = 0;
-            this.ckbOpcionA.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbOpcionA.Font = new System.Drawing.Font("Roboto", 10F);
             this.ckbOpcionA.Location = new System.Drawing.Point(210, 110);
             this.ckbOpcionA.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionA.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -290,7 +290,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Depth = 0;
-            this.lblCategoria.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblCategoria.Location = new System.Drawing.Point(131, 115);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -322,7 +322,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Depth = 0;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblNombre.Location = new System.Drawing.Point(330, 66);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -336,7 +336,7 @@
             // 
             this.lblAsociado.AutoSize = true;
             this.lblAsociado.Depth = 0;
-            this.lblAsociado.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsociado.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblAsociado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblAsociado.Location = new System.Drawing.Point(87, 66);
             this.lblAsociado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -362,7 +362,7 @@
             // 
             this.lblAsociados.AutoSize = true;
             this.lblAsociados.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsociados.Location = new System.Drawing.Point(243, 15);
+            this.lblAsociados.Location = new System.Drawing.Point(242, 15);
             this.lblAsociados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAsociados.Name = "lblAsociados";
             this.lblAsociados.Size = new System.Drawing.Size(220, 23);
