@@ -189,7 +189,7 @@
             this.panel2.Controls.Add(this.btnWordDoc);
             this.panel2.Controls.Add(this.btnPDFDoc);
             this.panel2.Controls.Add(this.btnImprimir);
-            this.panel2.Location = new System.Drawing.Point(176, 304);
+            this.panel2.Location = new System.Drawing.Point(176, 293);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(703, 336);
@@ -244,7 +244,7 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.btnBuscar);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(176, 78);
+            this.panel1.Location = new System.Drawing.Point(176, 64);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(703, 204);
