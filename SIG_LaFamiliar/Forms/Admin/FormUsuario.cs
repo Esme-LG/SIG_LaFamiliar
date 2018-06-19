@@ -12,24 +12,13 @@ using MaterialSkin.Controls;
 
 namespace SIG_LaFamiliar.Forms.Admin
 {
-    public partial class FormNuevoUsuario : MaterialForm
+    public partial class FormUsuario : MaterialForm
     {
-        public FormNuevoUsuario()
+        public FormUsuario()
         {
             InitializeComponent();
 
-            // Crear un administrador de tema material y agregar el form a manejar (this)
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-
-            // Configurar esquema de color
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.LightGreen600, Primary.LightGreen800,
-                Primary.LightGreen200, Accent.LightGreen200,
-                TextShade.WHITE
-            );
-
+            Proveedor.AddStyle(this);
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

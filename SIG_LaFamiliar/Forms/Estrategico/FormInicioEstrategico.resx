@@ -1016,6 +1016,9 @@
         w+FwBAvR6HA4HA6HI1iIRofD4XA4HEGC/tf/DxXNf2L50m50AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="lblDesc5.Text" xml:space="preserve">
+    <value>Medición del monto recuperado a través de los nuevos planes de pago, asumiendo que un crédito al que se le crea un nuevo plan de pago era un crédito irrecuperable, y todo lo pagado con el nuevo plan es recuperación.</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAAAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA

@@ -43,7 +43,7 @@
             // 
             this.pcbLogo.Image = global::SIG_LaFamiliar.Properties.Resources.Logo;
             this.pcbLogo.Location = new System.Drawing.Point(32, 116);
-            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pcbLogo.Name = "pcbLogo";
             this.pcbLogo.Size = new System.Drawing.Size(150, 162);
             this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -83,15 +83,15 @@
             this.txtContra.Depth = 0;
             this.txtContra.Hint = "";
             this.txtContra.Location = new System.Drawing.Point(230, 233);
-            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2);
             this.txtContra.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '*';
             this.txtContra.SelectedText = "";
             this.txtContra.SelectionLength = 0;
             this.txtContra.SelectionStart = 0;
-            this.txtContra.Size = new System.Drawing.Size(415, 23);
-            this.txtContra.TabIndex = 4;
+            this.txtContra.Size = new System.Drawing.Size(359, 23);
+            this.txtContra.TabIndex = 2;
             this.txtContra.UseSystemPasswordChar = false;
             // 
             // txtNombre
@@ -99,15 +99,15 @@
             this.txtNombre.Depth = 0;
             this.txtNombre.Hint = "";
             this.txtNombre.Location = new System.Drawing.Point(230, 163);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.SelectedText = "";
             this.txtNombre.SelectionLength = 0;
             this.txtNombre.SelectionStart = 0;
-            this.txtNombre.Size = new System.Drawing.Size(415, 23);
-            this.txtNombre.TabIndex = 5;
+            this.txtNombre.Size = new System.Drawing.Size(359, 23);
+            this.txtNombre.TabIndex = 1;
             this.txtNombre.UseSystemPasswordChar = false;
             // 
             // lblTitleLogin
@@ -123,14 +123,15 @@
             // 
             // btnEntrar
             // 
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.Depth = 0;
             this.btnEntrar.Location = new System.Drawing.Point(410, 275);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEntrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Primary = true;
             this.btnEntrar.Size = new System.Drawing.Size(144, 28);
-            this.btnEntrar.TabIndex = 7;
+            this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -148,7 +149,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pcbLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 325);
             this.MinimumSize = new System.Drawing.Size(600, 325);

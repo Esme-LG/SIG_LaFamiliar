@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnUsuarios = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -36,18 +40,19 @@
             this.pnlEspacio = new System.Windows.Forms.Panel();
             this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnBitacora = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.tblUsuarios = new System.Windows.Forms.DataGridView();
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(66)))));
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.Location = new System.Drawing.Point(0, 376);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
@@ -69,6 +74,7 @@
             this.btnUsuarios.Primary = true;
             this.btnUsuarios.Size = new System.Drawing.Size(159, 45);
             this.btnUsuarios.TabIndex = 25;
+            this.btnUsuarios.TabStop = false;
             this.btnUsuarios.Text = "Ver usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
             // 
@@ -84,6 +90,7 @@
             this.btnInicio.Primary = true;
             this.btnInicio.Size = new System.Drawing.Size(159, 45);
             this.btnInicio.TabIndex = 24;
+            this.btnInicio.TabStop = false;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -121,6 +128,7 @@
             this.btnNuevo.Primary = true;
             this.btnNuevo.Size = new System.Drawing.Size(159, 45);
             this.btnNuevo.TabIndex = 30;
+            this.btnNuevo.TabStop = false;
             this.btnNuevo.Text = "Nuevo usuario";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -137,60 +145,94 @@
             this.btnBitacora.Primary = true;
             this.btnBitacora.Size = new System.Drawing.Size(159, 45);
             this.btnBitacora.TabIndex = 31;
+            this.btnBitacora.TabStop = false;
             this.btnBitacora.Text = "Bitácora";
             this.btnBitacora.UseVisualStyleBackColor = true;
             this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
             // 
-            // panel1
+            // pnlPrincipal
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(176, 78);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 120);
-            this.panel1.TabIndex = 57;
+            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.tblUsuarios);
+            this.pnlPrincipal.Controls.Add(this.lblTitulo);
+            this.pnlPrincipal.Location = new System.Drawing.Point(176, 64);
+            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(703, 550);
+            this.pnlPrincipal.TabIndex = 57;
             // 
-            // btnBuscar
+            // tblUsuarios
             // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(652, 50);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(30, 32);
-            this.btnBuscar.TabIndex = 43;
-            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.tblUsuarios.AllowUserToAddRows = false;
+            this.tblUsuarios.AllowUserToDeleteRows = false;
+            this.tblUsuarios.AllowUserToOrderColumns = true;
+            this.tblUsuarios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tblUsuarios.Location = new System.Drawing.Point(71, 78);
+            this.tblUsuarios.MultiSelect = false;
+            this.tblUsuarios.Name = "tblUsuarios";
+            this.tblUsuarios.ReadOnly = true;
+            this.tblUsuarios.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblUsuarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tblUsuarios.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.tblUsuarios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.tblUsuarios.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblUsuarios.RowTemplate.ReadOnly = true;
+            this.tblUsuarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tblUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblUsuarios.ShowCellErrors = false;
+            this.tblUsuarios.ShowCellToolTips = false;
+            this.tblUsuarios.ShowEditingIcon = false;
+            this.tblUsuarios.ShowRowErrors = false;
+            this.tblUsuarios.Size = new System.Drawing.Size(559, 279);
+            this.tblUsuarios.TabIndex = 30;
+            this.tblUsuarios.TabStop = false;
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(261, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 23);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Listado de usuarios";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(176, 230);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(703, 385);
-            this.panel2.TabIndex = 58;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(262, 15);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(180, 23);
+            this.lblTitulo.TabIndex = 29;
+            this.lblTitulo.Text = "Listado de usuarios";
             // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 640);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.btnBitacora);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pnlEspacio);
@@ -210,8 +252,9 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormInicioAdmin_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlPrincipal.ResumeLayout(false);
+            this.pnlPrincipal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,9 +268,8 @@
         private System.Windows.Forms.Panel pnlEspacio;
         private MaterialSkin.Controls.MaterialRaisedButton btnNuevo;
         private MaterialSkin.Controls.MaterialRaisedButton btnBitacora;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlPrincipal;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridView tblUsuarios;
     }
 }

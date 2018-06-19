@@ -89,11 +89,11 @@
     <Compile Include="Forms\Admin\FormInicioAdmin.Designer.cs">
       <DependentUpon>FormInicioAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Admin\FormNuevoUsuario.cs">
+    <Compile Include="Forms\Admin\FormUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Admin\FormNuevoUsuario.Designer.cs">
-      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
+    <Compile Include="Forms\Admin\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin\FormUsuarios.cs">
       <SubType>Form</SubType>
@@ -192,8 +192,8 @@
     <EmbeddedResource Include="Forms\Admin\FormInicioAdmin.resx">
       <DependentUpon>FormInicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Admin\FormNuevoUsuario.resx">
-      <DependentUpon>FormNuevoUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Admin\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>

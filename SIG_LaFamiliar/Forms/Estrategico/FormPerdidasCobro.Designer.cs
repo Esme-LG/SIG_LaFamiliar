@@ -38,18 +38,24 @@
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.btnPerdidasAsociados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pnlEspacio = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlParams = new System.Windows.Forms.Panel();
+            this.cmbMesFin = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cmbAnioFin = new System.Windows.Forms.ComboBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.cmbMesInicio = new System.Windows.Forms.ComboBox();
+            this.cmbAnioInicio = new System.Windows.Forms.ComboBox();
+            this.lblInicio = new System.Windows.Forms.Label();
+            this.lblFin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlPrincipal.SuspendLayout();
+            this.pnlParams.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -78,6 +84,7 @@
             this.btnRecuperacion.Primary = true;
             this.btnRecuperacion.Size = new System.Drawing.Size(159, 45);
             this.btnRecuperacion.TabIndex = 28;
+            this.btnRecuperacion.TabStop = false;
             this.btnRecuperacion.Text = "Recuperación";
             this.btnRecuperacion.UseVisualStyleBackColor = true;
             this.btnRecuperacion.Click += new System.EventHandler(this.btnRecuperacion_Click);
@@ -94,6 +101,7 @@
             this.btnMorosos.Primary = true;
             this.btnMorosos.Size = new System.Drawing.Size(159, 45);
             this.btnMorosos.TabIndex = 27;
+            this.btnMorosos.TabStop = false;
             this.btnMorosos.Text = "Morosos por cuota";
             this.btnMorosos.UseVisualStyleBackColor = true;
             this.btnMorosos.Click += new System.EventHandler(this.btnMorosos_Click);
@@ -110,6 +118,7 @@
             this.btnPerdidas.Primary = true;
             this.btnPerdidas.Size = new System.Drawing.Size(159, 45);
             this.btnPerdidas.TabIndex = 26;
+            this.btnPerdidas.TabStop = false;
             this.btnPerdidas.Text = "Perdidas por falta de cobro";
             this.btnPerdidas.UseVisualStyleBackColor = true;
             // 
@@ -125,6 +134,7 @@
             this.btnIndice.Primary = true;
             this.btnIndice.Size = new System.Drawing.Size(159, 45);
             this.btnIndice.TabIndex = 25;
+            this.btnIndice.TabStop = false;
             this.btnIndice.Text = "índice de morosidad";
             this.btnIndice.UseVisualStyleBackColor = true;
             this.btnIndice.Click += new System.EventHandler(this.btnIndice_Click);
@@ -141,6 +151,7 @@
             this.btnInicio.Primary = true;
             this.btnInicio.Size = new System.Drawing.Size(159, 45);
             this.btnInicio.TabIndex = 24;
+            this.btnInicio.TabStop = false;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -169,6 +180,7 @@
             this.btnPerdidasAsociados.Primary = true;
             this.btnPerdidasAsociados.Size = new System.Drawing.Size(159, 45);
             this.btnPerdidasAsociados.TabIndex = 31;
+            this.btnPerdidasAsociados.TabStop = false;
             this.btnPerdidasAsociados.Text = "Perdidas por asociados";
             this.btnPerdidasAsociados.UseVisualStyleBackColor = true;
             this.btnPerdidasAsociados.Click += new System.EventHandler(this.btnPerdidasAsociados_Click);
@@ -182,104 +194,179 @@
             this.pnlEspacio.Size = new System.Drawing.Size(158, 126);
             this.pnlEspacio.TabIndex = 32;
             // 
-            // panel2
+            // pnlPrincipal
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.btnExcel);
-            this.panel2.Controls.Add(this.btnWordDoc);
-            this.panel2.Controls.Add(this.btnPDFDoc);
-            this.panel2.Controls.Add(this.btnImprimir);
-            this.panel2.Location = new System.Drawing.Point(176, 293);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(703, 336);
-            this.panel2.TabIndex = 56;
+            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.btnExcel);
+            this.pnlPrincipal.Controls.Add(this.btnWordDoc);
+            this.pnlPrincipal.Controls.Add(this.btnPDFDoc);
+            this.pnlPrincipal.Controls.Add(this.btnImprimir);
+            this.pnlPrincipal.Location = new System.Drawing.Point(176, 260);
+            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(703, 360);
+            this.pnlPrincipal.TabIndex = 56;
             // 
             // btnExcel
             // 
             this.btnExcel.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.excel;
             this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcel.Location = new System.Drawing.Point(549, 11);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(30, 32);
-            this.btnExcel.TabIndex = 47;
+            this.btnExcel.TabIndex = 6;
             this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // btnWordDoc
             // 
             this.btnWordDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.word;
             this.btnWordDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWordDoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWordDoc.Location = new System.Drawing.Point(584, 11);
             this.btnWordDoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnWordDoc.Name = "btnWordDoc";
             this.btnWordDoc.Size = new System.Drawing.Size(30, 32);
-            this.btnWordDoc.TabIndex = 46;
+            this.btnWordDoc.TabIndex = 7;
             this.btnWordDoc.UseVisualStyleBackColor = true;
             // 
             // btnPDFDoc
             // 
             this.btnPDFDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.pdf;
             this.btnPDFDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPDFDoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPDFDoc.Location = new System.Drawing.Point(618, 11);
             this.btnPDFDoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnPDFDoc.Name = "btnPDFDoc";
             this.btnPDFDoc.Size = new System.Drawing.Size(30, 32);
-            this.btnPDFDoc.TabIndex = 45;
+            this.btnPDFDoc.TabIndex = 8;
             this.btnPDFDoc.UseVisualStyleBackColor = true;
             // 
             // btnImprimir
             // 
             this.btnImprimir.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.print;
             this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.Location = new System.Drawing.Point(652, 11);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(30, 32);
-            this.btnImprimir.TabIndex = 44;
+            this.btnImprimir.TabIndex = 9;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // pnlParams
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(176, 64);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 204);
-            this.panel1.TabIndex = 55;
+            this.pnlParams.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlParams.Controls.Add(this.cmbMesFin);
+            this.pnlParams.Controls.Add(this.btnBuscar);
+            this.pnlParams.Controls.Add(this.cmbAnioFin);
+            this.pnlParams.Controls.Add(this.lblTitulo);
+            this.pnlParams.Controls.Add(this.cmbMesInicio);
+            this.pnlParams.Controls.Add(this.cmbAnioInicio);
+            this.pnlParams.Controls.Add(this.lblInicio);
+            this.pnlParams.Controls.Add(this.lblFin);
+            this.pnlParams.Location = new System.Drawing.Point(176, 64);
+            this.pnlParams.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlParams.Name = "pnlParams";
+            this.pnlParams.Size = new System.Drawing.Size(703, 175);
+            this.pnlParams.TabIndex = 55;
+            // 
+            // cmbMesFin
+            // 
+            this.cmbMesFin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbMesFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMesFin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMesFin.FormattingEnabled = true;
+            this.cmbMesFin.Location = new System.Drawing.Point(405, 106);
+            this.cmbMesFin.Name = "cmbMesFin";
+            this.cmbMesFin.Size = new System.Drawing.Size(135, 27);
+            this.cmbMesFin.TabIndex = 4;
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Location = new System.Drawing.Point(652, 142);
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Location = new System.Drawing.Point(602, 102);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
-            this.btnBuscar.TabIndex = 43;
+            this.btnBuscar.TabIndex = 5;
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // cmbAnioFin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(229, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 23);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Pérdidas por falta de cobro";
+            this.cmbAnioFin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAnioFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAnioFin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnioFin.FormattingEnabled = true;
+            this.cmbAnioFin.Location = new System.Drawing.Point(286, 106);
+            this.cmbAnioFin.Name = "cmbAnioFin";
+            this.cmbAnioFin.Size = new System.Drawing.Size(95, 27);
+            this.cmbAnioFin.TabIndex = 3;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Roboto Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(229, 15);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(245, 23);
+            this.lblTitulo.TabIndex = 29;
+            this.lblTitulo.Text = "Pérdidas por falta de cobro";
+            // 
+            // cmbMesInicio
+            // 
+            this.cmbMesInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbMesInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMesInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMesInicio.FormattingEnabled = true;
+            this.cmbMesInicio.Location = new System.Drawing.Point(405, 63);
+            this.cmbMesInicio.Name = "cmbMesInicio";
+            this.cmbMesInicio.Size = new System.Drawing.Size(135, 27);
+            this.cmbMesInicio.TabIndex = 2;
+            // 
+            // cmbAnioInicio
+            // 
+            this.cmbAnioInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbAnioInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbAnioInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAnioInicio.FormattingEnabled = true;
+            this.cmbAnioInicio.Location = new System.Drawing.Point(286, 63);
+            this.cmbAnioInicio.Name = "cmbAnioInicio";
+            this.cmbAnioInicio.Size = new System.Drawing.Size(95, 27);
+            this.cmbAnioInicio.TabIndex = 1;
+            // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Location = new System.Drawing.Point(61, 66);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(219, 19);
+            this.lblInicio.TabIndex = 61;
+            this.lblInicio.Text = "Seleccione el periodo de inicio:";
+            // 
+            // lblFin
+            // 
+            this.lblFin.AutoSize = true;
+            this.lblFin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFin.Location = new System.Drawing.Point(81, 109);
+            this.lblFin.Name = "lblFin";
+            this.lblFin.Size = new System.Drawing.Size(199, 19);
+            this.lblFin.TabIndex = 62;
+            this.lblFin.Text = "Seleccione el periodo de fin:";
             // 
             // FormPerdidasCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 640);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlPrincipal);
+            this.Controls.Add(this.pnlParams);
             this.Controls.Add(this.pnlEspacio);
             this.Controls.Add(this.btnPerdidasAsociados);
             this.Controls.Add(this.btnSalir);
@@ -301,9 +388,9 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPerdidasCobro_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlPrincipal.ResumeLayout(false);
+            this.pnlParams.ResumeLayout(false);
+            this.pnlParams.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -319,13 +406,19 @@
         private System.Windows.Forms.PictureBox pcbLogo;
         private MaterialSkin.Controls.MaterialRaisedButton btnPerdidasAsociados;
         private System.Windows.Forms.Panel pnlEspacio;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnWordDoc;
         private System.Windows.Forms.Button btnPDFDoc;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlParams;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.ComboBox cmbMesFin;
+        private System.Windows.Forms.ComboBox cmbAnioFin;
+        private System.Windows.Forms.ComboBox cmbMesInicio;
+        private System.Windows.Forms.ComboBox cmbAnioInicio;
+        private System.Windows.Forms.Label lblInicio;
+        private System.Windows.Forms.Label lblFin;
     }
 }

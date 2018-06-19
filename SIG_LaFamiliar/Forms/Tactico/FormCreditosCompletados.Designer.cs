@@ -28,27 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreditosCompletados));
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.tblCompletados = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asociado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoría = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valoractual = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlParams = new System.Windows.Forms.Panel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.rdbIguales = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdbCambios = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdbTodos = new MaterialSkin.Controls.MaterialRadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblCompletados = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlEspacio = new System.Windows.Forms.Panel();
             this.btnMorososTipo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnMorososHistoricos = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -59,147 +51,87 @@
             this.btnMorososVigentes = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnAsociados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnProyeccion = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCompletados)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlPrincipal.SuspendLayout();
+            this.pnlParams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // pnlPrincipal
             // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.btnExcel);
-            this.panel2.Controls.Add(this.btnWordDoc);
-            this.panel2.Controls.Add(this.btnPDFDoc);
-            this.panel2.Controls.Add(this.btnImprimir);
-            this.panel2.Controls.Add(this.tblCompletados);
-            this.panel2.Location = new System.Drawing.Point(173, 259);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(703, 367);
-            this.panel2.TabIndex = 54;
+            this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.btnExcel);
+            this.pnlPrincipal.Controls.Add(this.btnWordDoc);
+            this.pnlPrincipal.Controls.Add(this.btnPDFDoc);
+            this.pnlPrincipal.Controls.Add(this.btnImprimir);
+            this.pnlPrincipal.Location = new System.Drawing.Point(173, 259);
+            this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(703, 367);
+            this.pnlPrincipal.TabIndex = 54;
             // 
             // btnExcel
             // 
             this.btnExcel.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.excel;
             this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcel.Location = new System.Drawing.Point(549, 11);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(30, 32);
-            this.btnExcel.TabIndex = 47;
+            this.btnExcel.TabIndex = 5;
             this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // btnWordDoc
             // 
             this.btnWordDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.word;
             this.btnWordDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWordDoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWordDoc.Location = new System.Drawing.Point(584, 11);
             this.btnWordDoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnWordDoc.Name = "btnWordDoc";
             this.btnWordDoc.Size = new System.Drawing.Size(30, 32);
-            this.btnWordDoc.TabIndex = 46;
+            this.btnWordDoc.TabIndex = 6;
             this.btnWordDoc.UseVisualStyleBackColor = true;
             // 
             // btnPDFDoc
             // 
             this.btnPDFDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.pdf;
             this.btnPDFDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPDFDoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPDFDoc.Location = new System.Drawing.Point(618, 11);
             this.btnPDFDoc.Margin = new System.Windows.Forms.Padding(2);
             this.btnPDFDoc.Name = "btnPDFDoc";
             this.btnPDFDoc.Size = new System.Drawing.Size(30, 32);
-            this.btnPDFDoc.TabIndex = 45;
+            this.btnPDFDoc.TabIndex = 7;
             this.btnPDFDoc.UseVisualStyleBackColor = true;
             // 
             // btnImprimir
             // 
             this.btnImprimir.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.print;
             this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImprimir.Location = new System.Drawing.Point(652, 11);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(30, 32);
-            this.btnImprimir.TabIndex = 44;
+            this.btnImprimir.TabIndex = 8;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
-            // tblCompletados
+            // pnlParams
             // 
-            this.tblCompletados.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
-            this.tblCompletados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblCompletados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.tblCompletados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblCompletados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Asociado,
-            this.Categoría,
-            this.Valoractual});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblCompletados.DefaultCellStyle = dataGridViewCellStyle2;
-            this.tblCompletados.Location = new System.Drawing.Point(20, 63);
-            this.tblCompletados.Margin = new System.Windows.Forms.Padding(2);
-            this.tblCompletados.Name = "tblCompletados";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblCompletados.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.tblCompletados.RowHeadersVisible = false;
-            this.tblCompletados.RowTemplate.Height = 24;
-            this.tblCompletados.Size = new System.Drawing.Size(670, 252);
-            this.tblCompletados.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID crédito";
-            this.ID.Name = "ID";
-            // 
-            // Asociado
-            // 
-            this.Asociado.HeaderText = "Nombre asociado";
-            this.Asociado.Name = "Asociado";
-            // 
-            // Categoría
-            // 
-            this.Categoría.HeaderText = "Fecha de último pago";
-            this.Categoría.Name = "Categoría";
-            // 
-            // Valoractual
-            // 
-            this.Valoractual.HeaderText = "¿Cambió de cuenta?";
-            this.Valoractual.Name = "Valoractual";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.materialLabel1);
-            this.panel1.Controls.Add(this.rdbIguales);
-            this.panel1.Controls.Add(this.rdbCambios);
-            this.panel1.Controls.Add(this.rdbTodos);
-            this.panel1.Controls.Add(this.btnBuscar);
-            this.panel1.Controls.Add(this.lblCompletados);
-            this.panel1.Location = new System.Drawing.Point(173, 64);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 171);
-            this.panel1.TabIndex = 53;
+            this.pnlParams.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlParams.Controls.Add(this.materialLabel1);
+            this.pnlParams.Controls.Add(this.rdbIguales);
+            this.pnlParams.Controls.Add(this.rdbCambios);
+            this.pnlParams.Controls.Add(this.rdbTodos);
+            this.pnlParams.Controls.Add(this.btnBuscar);
+            this.pnlParams.Controls.Add(this.lblTitulo);
+            this.pnlParams.Location = new System.Drawing.Point(173, 64);
+            this.pnlParams.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlParams.Name = "pnlParams";
+            this.pnlParams.Size = new System.Drawing.Size(703, 171);
+            this.pnlParams.TabIndex = 53;
             // 
             // materialLabel1
             // 
@@ -218,6 +150,7 @@
             // rdbIguales
             // 
             this.rdbIguales.AutoSize = true;
+            this.rdbIguales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbIguales.Depth = 0;
             this.rdbIguales.Font = new System.Drawing.Font("Roboto", 10F);
             this.rdbIguales.Location = new System.Drawing.Point(218, 119);
@@ -227,7 +160,7 @@
             this.rdbIguales.Name = "rdbIguales";
             this.rdbIguales.Ripple = true;
             this.rdbIguales.Size = new System.Drawing.Size(335, 30);
-            this.rdbIguales.TabIndex = 46;
+            this.rdbIguales.TabIndex = 3;
             this.rdbIguales.TabStop = true;
             this.rdbIguales.Text = "Solo los créditos que no cambiaron plan de pagos";
             this.rdbIguales.UseVisualStyleBackColor = true;
@@ -235,6 +168,7 @@
             // rdbCambios
             // 
             this.rdbCambios.AutoSize = true;
+            this.rdbCambios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbCambios.Depth = 0;
             this.rdbCambios.Font = new System.Drawing.Font("Roboto", 10F);
             this.rdbCambios.Location = new System.Drawing.Point(218, 89);
@@ -244,7 +178,7 @@
             this.rdbCambios.Name = "rdbCambios";
             this.rdbCambios.Ripple = true;
             this.rdbCambios.Size = new System.Drawing.Size(316, 30);
-            this.rdbCambios.TabIndex = 45;
+            this.rdbCambios.TabIndex = 2;
             this.rdbCambios.TabStop = true;
             this.rdbCambios.Text = "Solo los créditos que cambiaron plan de pagos";
             this.rdbCambios.UseVisualStyleBackColor = true;
@@ -252,6 +186,8 @@
             // rdbTodos
             // 
             this.rdbTodos.AutoSize = true;
+            this.rdbTodos.Checked = true;
+            this.rdbTodos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbTodos.Depth = 0;
             this.rdbTodos.Font = new System.Drawing.Font("Roboto", 10F);
             this.rdbTodos.Location = new System.Drawing.Point(218, 59);
@@ -261,7 +197,7 @@
             this.rdbTodos.Name = "rdbTodos";
             this.rdbTodos.Ripple = true;
             this.rdbTodos.Size = new System.Drawing.Size(227, 30);
-            this.rdbTodos.TabIndex = 44;
+            this.rdbTodos.TabIndex = 1;
             this.rdbTodos.TabStop = true;
             this.rdbTodos.Text = "Todos los créditos completados";
             this.rdbTodos.UseVisualStyleBackColor = true;
@@ -271,23 +207,24 @@
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Location = new System.Drawing.Point(618, 117);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
-            this.btnBuscar.TabIndex = 43;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // lblCompletados
+            // lblTitulo
             // 
-            this.lblCompletados.AutoSize = true;
-            this.lblCompletados.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompletados.Location = new System.Drawing.Point(212, 15);
-            this.lblCompletados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCompletados.Name = "lblCompletados";
-            this.lblCompletados.Size = new System.Drawing.Size(279, 23);
-            this.lblCompletados.TabIndex = 29;
-            this.lblCompletados.Text = "Créditos morosos completados";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(212, 15);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(279, 23);
+            this.lblTitulo.TabIndex = 29;
+            this.lblTitulo.Text = "Créditos morosos completados";
             // 
             // pnlEspacio
             // 
@@ -310,6 +247,7 @@
             this.btnMorososTipo.Primary = true;
             this.btnMorososTipo.Size = new System.Drawing.Size(159, 45);
             this.btnMorososTipo.TabIndex = 66;
+            this.btnMorososTipo.TabStop = false;
             this.btnMorososTipo.Text = "Morosos por tipo de crédito";
             this.btnMorososTipo.UseVisualStyleBackColor = true;
             this.btnMorososTipo.Click += new System.EventHandler(this.btnMorososTipo_Click);
@@ -326,6 +264,7 @@
             this.btnMorososHistoricos.Primary = true;
             this.btnMorososHistoricos.Size = new System.Drawing.Size(159, 45);
             this.btnMorososHistoricos.TabIndex = 65;
+            this.btnMorososHistoricos.TabStop = false;
             this.btnMorososHistoricos.Text = "Morosos históricos";
             this.btnMorososHistoricos.UseVisualStyleBackColor = true;
             this.btnMorososHistoricos.Click += new System.EventHandler(this.btnMorososHistoricos_Click);
@@ -368,6 +307,7 @@
             this.btnInicio.Primary = true;
             this.btnInicio.Size = new System.Drawing.Size(159, 45);
             this.btnInicio.TabIndex = 59;
+            this.btnInicio.TabStop = false;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -384,6 +324,7 @@
             this.btnCreditos.Primary = true;
             this.btnCreditos.Size = new System.Drawing.Size(159, 45);
             this.btnCreditos.TabIndex = 63;
+            this.btnCreditos.TabStop = false;
             this.btnCreditos.Text = "Créditos morosos completados";
             this.btnCreditos.UseVisualStyleBackColor = true;
             // 
@@ -399,6 +340,7 @@
             this.btnMorososVigentes.Primary = true;
             this.btnMorososVigentes.Size = new System.Drawing.Size(159, 45);
             this.btnMorososVigentes.TabIndex = 60;
+            this.btnMorososVigentes.TabStop = false;
             this.btnMorososVigentes.Text = "Morosos vigentes";
             this.btnMorososVigentes.UseVisualStyleBackColor = true;
             this.btnMorososVigentes.Click += new System.EventHandler(this.btnMorososVigentes_Click);
@@ -415,6 +357,7 @@
             this.btnAsociados.Primary = true;
             this.btnAsociados.Size = new System.Drawing.Size(159, 45);
             this.btnAsociados.TabIndex = 62;
+            this.btnAsociados.TabStop = false;
             this.btnAsociados.Text = "Asociados por categoría";
             this.btnAsociados.UseVisualStyleBackColor = true;
             this.btnAsociados.Click += new System.EventHandler(this.btnAsociados_Click);
@@ -431,6 +374,7 @@
             this.btnProyeccion.Primary = true;
             this.btnProyeccion.Size = new System.Drawing.Size(159, 45);
             this.btnProyeccion.TabIndex = 61;
+            this.btnProyeccion.TabStop = false;
             this.btnProyeccion.Text = "Proyección de pagos";
             this.btnProyeccion.UseVisualStyleBackColor = true;
             this.btnProyeccion.Click += new System.EventHandler(this.btnProyeccion_Click);
@@ -441,9 +385,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 640);
             this.Controls.Add(this.pnlEspacio);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.btnMorososTipo);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlParams);
             this.Controls.Add(this.btnMorososHistoricos);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.pcbLogo);
@@ -461,10 +405,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormCreditosCompletados_FormClosed);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tblCompletados)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlPrincipal.ResumeLayout(false);
+            this.pnlParams.ResumeLayout(false);
+            this.pnlParams.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.ResumeLayout(false);
@@ -473,23 +416,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnWordDoc;
         private System.Windows.Forms.Button btnPDFDoc;
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.DataGridView tblCompletados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Asociado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoría;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valoractual;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlParams;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialRadioButton rdbIguales;
         private MaterialSkin.Controls.MaterialRadioButton rdbCambios;
         private MaterialSkin.Controls.MaterialRadioButton rdbTodos;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label lblCompletados;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlEspacio;
         private MaterialSkin.Controls.MaterialRaisedButton btnMorososTipo;
         private MaterialSkin.Controls.MaterialRaisedButton btnMorososHistoricos;

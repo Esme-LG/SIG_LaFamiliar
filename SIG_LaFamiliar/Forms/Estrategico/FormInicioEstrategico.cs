@@ -18,17 +18,7 @@ namespace SIG_LaFamiliar.Forms.Estrategico
         {
             InitializeComponent();
 
-            // Crear un administrador de tema material y agregar el form a manejar (this)
-            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-
-            // Configurar esquema de color
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.LightGreen600, Primary.LightGreen800,
-                Primary.LightGreen200, Accent.LightGreen200,
-                TextShade.WHITE
-            );
+            Proveedor.AddStyle(this);
         }
         
         private void btnIndice_Click(object sender, EventArgs e)
@@ -75,6 +65,21 @@ namespace SIG_LaFamiliar.Forms.Estrategico
         private void FormInicioEstrategico_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
