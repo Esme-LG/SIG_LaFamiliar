@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRecuperacion));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnRecuperacion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnMorosos = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -39,22 +43,22 @@
             this.btnPerdidasAsociados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pnlEspacio = new System.Windows.Forms.Panel();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.tblResultado = new System.Windows.Forms.DataGridView();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.pnlParams = new System.Windows.Forms.Panel();
-            this.cmbMesFin = new System.Windows.Forms.ComboBox();
+            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.cmbAnioFin = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.cmbMesInicio = new System.Windows.Forms.ComboBox();
-            this.cmbAnioInicio = new System.Windows.Forms.ComboBox();
             this.lblInicio = new System.Windows.Forms.Label();
             this.lblFin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).BeginInit();
             this.pnlParams.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,6 +201,7 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.tblResultado);
             this.pnlPrincipal.Controls.Add(this.btnExcel);
             this.pnlPrincipal.Controls.Add(this.btnWordDoc);
             this.pnlPrincipal.Controls.Add(this.btnPDFDoc);
@@ -206,6 +211,57 @@
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(703, 360);
             this.pnlPrincipal.TabIndex = 56;
+            // 
+            // tblResultado
+            // 
+            this.tblResultado.AllowUserToAddRows = false;
+            this.tblResultado.AllowUserToDeleteRows = false;
+            this.tblResultado.AllowUserToResizeColumns = false;
+            this.tblResultado.AllowUserToResizeRows = false;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.tblResultado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblResultado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.tblResultado.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblResultado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.tblResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblResultado.DefaultCellStyle = dataGridViewCellStyle15;
+            this.tblResultado.Location = new System.Drawing.Point(42, 70);
+            this.tblResultado.MultiSelect = false;
+            this.tblResultado.Name = "tblResultado";
+            this.tblResultado.RowHeadersVisible = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.tblResultado.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tblResultado.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tblResultado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblResultado.Size = new System.Drawing.Size(629, 261);
+            this.tblResultado.TabIndex = 58;
             // 
             // btnExcel
             // 
@@ -218,6 +274,7 @@
             this.btnExcel.Size = new System.Drawing.Size(30, 32);
             this.btnExcel.TabIndex = 6;
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnWordDoc
             // 
@@ -230,6 +287,7 @@
             this.btnWordDoc.Size = new System.Drawing.Size(30, 32);
             this.btnWordDoc.TabIndex = 7;
             this.btnWordDoc.UseVisualStyleBackColor = true;
+            this.btnWordDoc.Click += new System.EventHandler(this.btnWordDoc_Click);
             // 
             // btnPDFDoc
             // 
@@ -242,6 +300,7 @@
             this.btnPDFDoc.Size = new System.Drawing.Size(30, 32);
             this.btnPDFDoc.TabIndex = 8;
             this.btnPDFDoc.UseVisualStyleBackColor = true;
+            this.btnPDFDoc.Click += new System.EventHandler(this.btnPDFDoc_Click);
             // 
             // btnImprimir
             // 
@@ -254,16 +313,15 @@
             this.btnImprimir.Size = new System.Drawing.Size(30, 32);
             this.btnImprimir.TabIndex = 9;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // pnlParams
             // 
             this.pnlParams.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlParams.Controls.Add(this.cmbMesFin);
+            this.pnlParams.Controls.Add(this.dtpFinal);
+            this.pnlParams.Controls.Add(this.dtpInicio);
             this.pnlParams.Controls.Add(this.btnBuscar);
-            this.pnlParams.Controls.Add(this.cmbAnioFin);
             this.pnlParams.Controls.Add(this.lblTitulo);
-            this.pnlParams.Controls.Add(this.cmbMesInicio);
-            this.pnlParams.Controls.Add(this.cmbAnioInicio);
             this.pnlParams.Controls.Add(this.lblInicio);
             this.pnlParams.Controls.Add(this.lblFin);
             this.pnlParams.Location = new System.Drawing.Point(176, 64);
@@ -272,16 +330,23 @@
             this.pnlParams.Size = new System.Drawing.Size(703, 175);
             this.pnlParams.TabIndex = 55;
             // 
-            // cmbMesFin
+            // dtpFinal
             // 
-            this.cmbMesFin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbMesFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMesFin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMesFin.FormattingEnabled = true;
-            this.cmbMesFin.Location = new System.Drawing.Point(405, 106);
-            this.cmbMesFin.Name = "cmbMesFin";
-            this.cmbMesFin.Size = new System.Drawing.Size(135, 27);
-            this.cmbMesFin.TabIndex = 4;
+            this.dtpFinal.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFinal.Location = new System.Drawing.Point(410, 105);
+            this.dtpFinal.Name = "dtpFinal";
+            this.dtpFinal.Size = new System.Drawing.Size(116, 26);
+            this.dtpFinal.TabIndex = 64;
+            // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(410, 62);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(116, 26);
+            this.dtpInicio.TabIndex = 63;
             // 
             // btnBuscar
             // 
@@ -295,17 +360,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // cmbAnioFin
-            // 
-            this.cmbAnioFin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAnioFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAnioFin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnioFin.FormattingEnabled = true;
-            this.cmbAnioFin.Location = new System.Drawing.Point(286, 106);
-            this.cmbAnioFin.Name = "cmbAnioFin";
-            this.cmbAnioFin.Size = new System.Drawing.Size(95, 27);
-            this.cmbAnioFin.TabIndex = 3;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblTitulo
             // 
@@ -318,47 +373,25 @@
             this.lblTitulo.TabIndex = 29;
             this.lblTitulo.Text = "Recuperación por nuevos planes de cobro";
             // 
-            // cmbMesInicio
-            // 
-            this.cmbMesInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbMesInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMesInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMesInicio.FormattingEnabled = true;
-            this.cmbMesInicio.Location = new System.Drawing.Point(405, 63);
-            this.cmbMesInicio.Name = "cmbMesInicio";
-            this.cmbMesInicio.Size = new System.Drawing.Size(135, 27);
-            this.cmbMesInicio.TabIndex = 2;
-            // 
-            // cmbAnioInicio
-            // 
-            this.cmbAnioInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAnioInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAnioInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnioInicio.FormattingEnabled = true;
-            this.cmbAnioInicio.Location = new System.Drawing.Point(286, 63);
-            this.cmbAnioInicio.Name = "cmbAnioInicio";
-            this.cmbAnioInicio.Size = new System.Drawing.Size(95, 27);
-            this.cmbAnioInicio.TabIndex = 1;
-            // 
             // lblInicio
             // 
             this.lblInicio.AutoSize = true;
             this.lblInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInicio.Location = new System.Drawing.Point(61, 66);
+            this.lblInicio.Location = new System.Drawing.Point(185, 66);
             this.lblInicio.Name = "lblInicio";
-            this.lblInicio.Size = new System.Drawing.Size(219, 19);
+            this.lblInicio.Size = new System.Drawing.Size(205, 19);
             this.lblInicio.TabIndex = 61;
-            this.lblInicio.Text = "Seleccione el periodo de inicio:";
+            this.lblInicio.Text = "Seleccione la fecha de inicio:";
             // 
             // lblFin
             // 
             this.lblFin.AutoSize = true;
             this.lblFin.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFin.Location = new System.Drawing.Point(81, 109);
+            this.lblFin.Location = new System.Drawing.Point(205, 109);
             this.lblFin.Name = "lblFin";
-            this.lblFin.Size = new System.Drawing.Size(199, 19);
+            this.lblFin.Size = new System.Drawing.Size(185, 19);
             this.lblFin.TabIndex = 62;
-            this.lblFin.Text = "Seleccione el periodo de fin:";
+            this.lblFin.Text = "Seleccione la fecha de fin:";
             // 
             // FormRecuperacion
             // 
@@ -389,6 +422,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.pnlPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).EndInit();
             this.pnlParams.ResumeLayout(false);
             this.pnlParams.PerformLayout();
             this.ResumeLayout(false);
@@ -414,11 +448,10 @@
         private System.Windows.Forms.Panel pnlParams;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.ComboBox cmbMesFin;
-        private System.Windows.Forms.ComboBox cmbAnioFin;
-        private System.Windows.Forms.ComboBox cmbMesInicio;
-        private System.Windows.Forms.ComboBox cmbAnioInicio;
         private System.Windows.Forms.Label lblInicio;
         private System.Windows.Forms.Label lblFin;
+        private System.Windows.Forms.DateTimePicker dtpFinal;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
+        private System.Windows.Forms.DataGridView tblResultado;
     }
 }

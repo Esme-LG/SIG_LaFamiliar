@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using SIG_LaFamiliar.Datos;
 
 namespace SIG_LaFamiliar.Forms.Tactico
 {
@@ -72,6 +73,47 @@ namespace SIG_LaFamiliar.Forms.Tactico
         private void FormMorososCreditos_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            tblResultado.DataSource = DatosTacticos.mososidadPorTipoCredito(dtpFecha.Value.Month + 46);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.ExcelDG(tblResultado, "Morosos por tipo de crédito");
+            formEspera.Close();
+        }
+
+        private void btnWordDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morosidadTipo(tblResultado, "Morosidad por tipo de crédito", dtpFecha.Value.Month + 46+"", Proveedor.usuario.nombre, 00, "word");
+            formEspera.Close();
+        }
+
+        private void btnPDFDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morosidadTipo(tblResultado, "Morosidad por tipo de crédito", dtpFecha.Value.Month + 46 + "", Proveedor.usuario.nombre, 00, "pdf");
+            formEspera.Close();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morosidadTipo(tblResultado, "Morosidad por tipo de crédito", "asdasd", Proveedor.usuario.nombre, 123123, "print");
+            formEspera.Close();
         }
 
     }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnUsuarios = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -43,6 +43,7 @@
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.tblUsuarios = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnCrear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.pnlPrincipal.SuspendLayout();
@@ -153,6 +154,7 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.btnCrear);
             this.pnlPrincipal.Controls.Add(this.tblUsuarios);
             this.pnlPrincipal.Controls.Add(this.lblTitulo);
             this.pnlPrincipal.Location = new System.Drawing.Point(176, 64);
@@ -165,56 +167,53 @@
             // 
             this.tblUsuarios.AllowUserToAddRows = false;
             this.tblUsuarios.AllowUserToDeleteRows = false;
-            this.tblUsuarios.AllowUserToOrderColumns = true;
+            this.tblUsuarios.AllowUserToResizeColumns = false;
             this.tblUsuarios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.tblUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tblUsuarios.Location = new System.Drawing.Point(71, 78);
+            this.tblUsuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.tblUsuarios.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.tblUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblUsuarios.DefaultCellStyle = dataGridViewCellStyle11;
+            this.tblUsuarios.Location = new System.Drawing.Point(33, 143);
             this.tblUsuarios.MultiSelect = false;
             this.tblUsuarios.Name = "tblUsuarios";
-            this.tblUsuarios.ReadOnly = true;
             this.tblUsuarios.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.tblUsuarios.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.tblUsuarios.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.tblUsuarios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.tblUsuarios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
             this.tblUsuarios.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblUsuarios.RowTemplate.ReadOnly = true;
             this.tblUsuarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tblUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblUsuarios.ShowCellErrors = false;
-            this.tblUsuarios.ShowCellToolTips = false;
-            this.tblUsuarios.ShowEditingIcon = false;
-            this.tblUsuarios.ShowRowErrors = false;
-            this.tblUsuarios.Size = new System.Drawing.Size(559, 279);
+            this.tblUsuarios.Size = new System.Drawing.Size(629, 177);
             this.tblUsuarios.TabIndex = 30;
-            this.tblUsuarios.TabStop = false;
+            this.tblUsuarios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblUsuarios_CellContentDoubleClick);
             // 
             // lblTitulo
             // 
@@ -226,6 +225,18 @@
             this.lblTitulo.Size = new System.Drawing.Size(180, 23);
             this.lblTitulo.TabIndex = 29;
             this.lblTitulo.Text = "Listado de usuarios";
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCrear.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.Location = new System.Drawing.Point(551, 80);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(111, 30);
+            this.btnCrear.TabIndex = 31;
+            this.btnCrear.Text = "Crear usuario";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // FormUsuarios
             // 
@@ -250,6 +261,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormInicioAdmin_FormClosed);
+            this.Load += new System.EventHandler(this.FormUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.pnlPrincipal.ResumeLayout(false);
@@ -271,5 +283,6 @@
         private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView tblUsuarios;
+        private System.Windows.Forms.Button btnCrear;
     }
 }

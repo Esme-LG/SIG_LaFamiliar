@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMorososCreditos));
             this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.tblResultado = new System.Windows.Forms.DataGridView();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.pnlParams = new System.Windows.Forms.Panel();
-            this.cmbMes = new System.Windows.Forms.ComboBox();
-            this.cmbAnio = new System.Windows.Forms.ComboBox();
-            this.lblPeriodo = new MaterialSkin.Controls.MaterialLabel();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblInicio = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlEspacio = new System.Windows.Forms.Panel();
@@ -51,6 +55,7 @@
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).BeginInit();
             this.pnlParams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
@@ -59,6 +64,7 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.tblResultado);
             this.pnlPrincipal.Controls.Add(this.btnExcel);
             this.pnlPrincipal.Controls.Add(this.btnWordDoc);
             this.pnlPrincipal.Controls.Add(this.btnPDFDoc);
@@ -68,6 +74,57 @@
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(703, 405);
             this.pnlPrincipal.TabIndex = 54;
+            // 
+            // tblResultado
+            // 
+            this.tblResultado.AllowUserToAddRows = false;
+            this.tblResultado.AllowUserToDeleteRows = false;
+            this.tblResultado.AllowUserToResizeColumns = false;
+            this.tblResultado.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblResultado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblResultado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.tblResultado.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblResultado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tblResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblResultado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tblResultado.Location = new System.Drawing.Point(41, 86);
+            this.tblResultado.MultiSelect = false;
+            this.tblResultado.Name = "tblResultado";
+            this.tblResultado.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblResultado.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tblResultado.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tblResultado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblResultado.Size = new System.Drawing.Size(629, 261);
+            this.tblResultado.TabIndex = 58;
             // 
             // btnExcel
             // 
@@ -80,6 +137,7 @@
             this.btnExcel.Size = new System.Drawing.Size(30, 32);
             this.btnExcel.TabIndex = 4;
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnWordDoc
             // 
@@ -92,6 +150,7 @@
             this.btnWordDoc.Size = new System.Drawing.Size(30, 32);
             this.btnWordDoc.TabIndex = 5;
             this.btnWordDoc.UseVisualStyleBackColor = true;
+            this.btnWordDoc.Click += new System.EventHandler(this.btnWordDoc_Click);
             // 
             // btnPDFDoc
             // 
@@ -104,6 +163,7 @@
             this.btnPDFDoc.Size = new System.Drawing.Size(30, 32);
             this.btnPDFDoc.TabIndex = 6;
             this.btnPDFDoc.UseVisualStyleBackColor = true;
+            this.btnPDFDoc.Click += new System.EventHandler(this.btnPDFDoc_Click);
             // 
             // btnImprimir
             // 
@@ -116,13 +176,13 @@
             this.btnImprimir.Size = new System.Drawing.Size(30, 32);
             this.btnImprimir.TabIndex = 7;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // pnlParams
             // 
             this.pnlParams.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlParams.Controls.Add(this.cmbMes);
-            this.pnlParams.Controls.Add(this.cmbAnio);
-            this.pnlParams.Controls.Add(this.lblPeriodo);
+            this.pnlParams.Controls.Add(this.dtpFecha);
+            this.pnlParams.Controls.Add(this.lblInicio);
             this.pnlParams.Controls.Add(this.btnBuscar);
             this.pnlParams.Controls.Add(this.lblTitulo);
             this.pnlParams.Location = new System.Drawing.Point(174, 64);
@@ -131,58 +191,24 @@
             this.pnlParams.Size = new System.Drawing.Size(703, 133);
             this.pnlParams.TabIndex = 53;
             // 
-            // cmbMes
+            // dtpFecha
             // 
-            this.cmbMes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMes.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMes.FormattingEnabled = true;
-            this.cmbMes.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril ",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.cmbMes.Location = new System.Drawing.Point(411, 74);
-            this.cmbMes.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbMes.Name = "cmbMes";
-            this.cmbMes.Size = new System.Drawing.Size(135, 27);
-            this.cmbMes.TabIndex = 2;
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(406, 57);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(116, 24);
+            this.dtpFecha.TabIndex = 69;
             // 
-            // cmbAnio
+            // lblInicio
             // 
-            this.cmbAnio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAnio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAnio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnio.FormattingEnabled = true;
-            this.cmbAnio.Items.AddRange(new object[] {
-            "2018"});
-            this.cmbAnio.Location = new System.Drawing.Point(295, 74);
-            this.cmbAnio.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbAnio.Name = "cmbAnio";
-            this.cmbAnio.Size = new System.Drawing.Size(95, 27);
-            this.cmbAnio.TabIndex = 1;
-            // 
-            // lblPeriodo
-            // 
-            this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Depth = 0;
-            this.lblPeriodo.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPeriodo.Location = new System.Drawing.Point(121, 77);
-            this.lblPeriodo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPeriodo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(158, 19);
-            this.lblPeriodo.TabIndex = 47;
-            this.lblPeriodo.Text = "Seleccione el periodo:";
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Location = new System.Drawing.Point(177, 62);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(217, 18);
+            this.lblInicio.TabIndex = 68;
+            this.lblInicio.Text = "Seleccione la fecha a consultar:";
             // 
             // btnBuscar
             // 
@@ -190,21 +216,22 @@
             this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Location = new System.Drawing.Point(604, 71);
+            this.btnBuscar.Location = new System.Drawing.Point(584, 48);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(219, 15);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(266, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(285, 24);
             this.lblTitulo.TabIndex = 29;
             this.lblTitulo.Text = "Morosidad por tipo de crédito";
             // 
@@ -221,7 +248,7 @@
             // 
             this.btnMorososTipo.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnMorososTipo.Depth = 0;
-            this.btnMorososTipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososTipo.Location = new System.Drawing.Point(0, 329);
             this.btnMorososTipo.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososTipo.MouseState = MaterialSkin.MouseState.HOVER;
@@ -237,7 +264,7 @@
             // 
             this.btnMorososHistoricos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososHistoricos.Depth = 0;
-            this.btnMorososHistoricos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososHistoricos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososHistoricos.Location = new System.Drawing.Point(0, 283);
             this.btnMorososHistoricos.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososHistoricos.MouseState = MaterialSkin.MouseState.HOVER;
@@ -268,7 +295,7 @@
             // 
             this.btnCreditos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreditos.Depth = 0;
-            this.btnCreditos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreditos.Location = new System.Drawing.Point(0, 467);
             this.btnCreditos.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreditos.MouseState = MaterialSkin.MouseState.HOVER;
@@ -285,7 +312,7 @@
             // 
             this.btnAsociados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAsociados.Depth = 0;
-            this.btnAsociados.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsociados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsociados.Location = new System.Drawing.Point(0, 421);
             this.btnAsociados.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsociados.MouseState = MaterialSkin.MouseState.HOVER;
@@ -302,7 +329,7 @@
             // 
             this.btnProyeccion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProyeccion.Depth = 0;
-            this.btnProyeccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProyeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProyeccion.Location = new System.Drawing.Point(0, 375);
             this.btnProyeccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnProyeccion.MouseState = MaterialSkin.MouseState.HOVER;
@@ -319,7 +346,7 @@
             // 
             this.btnMorososVigentes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososVigentes.Depth = 0;
-            this.btnMorososVigentes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososVigentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososVigentes.Location = new System.Drawing.Point(0, 237);
             this.btnMorososVigentes.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososVigentes.MouseState = MaterialSkin.MouseState.HOVER;
@@ -336,7 +363,7 @@
             // 
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Depth = 0;
-            this.btnInicio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.Location = new System.Drawing.Point(0, 191);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
@@ -388,6 +415,7 @@
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMorososCreditos_FormClosed);
             this.pnlPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).EndInit();
             this.pnlParams.ResumeLayout(false);
             this.pnlParams.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
@@ -416,8 +444,8 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnMorososVigentes;
         private MaterialSkin.Controls.MaterialRaisedButton btnInicio;
         private System.Windows.Forms.PictureBox pcbLogo;
-        private System.Windows.Forms.ComboBox cmbMes;
-        private System.Windows.Forms.ComboBox cmbAnio;
-        private MaterialSkin.Controls.MaterialLabel lblPeriodo;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label lblInicio;
+        private System.Windows.Forms.DataGridView tblResultado;
     }
 }

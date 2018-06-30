@@ -12,6 +12,7 @@ using MaterialSkin.Controls;
 using Excel = Microsoft.Office.Interop.Excel;
 using Word = Microsoft.Office.Interop.Word;
 using System.Reflection;
+using SIG_LaFamiliar.Datos;
 
 namespace SIG_LaFamiliar.Forms.Tactico
 {
@@ -75,6 +76,54 @@ namespace SIG_LaFamiliar.Forms.Tactico
         private void FormMorososVigentes_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if(!ckbCategoriaB.Checked &&  !ckbCategoriaC.Checked && !ckbCategoriaD.Checked && !ckbCategoriaF.Checked)
+            {
+                MessageBox.Show("Selecciona una o más categorías", "Error en el ingreso de datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                tblResultado.DataSource = DatosTacticos.morososVigentes(ckbCategoriaB.Checked, ckbCategoriaC.Checked, ckbCategoriaD.Checked, ckbCategoriaF.Checked);
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.ExcelDG(tblResultado, "Morosos vigentes");
+            formEspera.Close();
+        }
+
+        private void btnWordDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososVigentes(tblResultado, "27/06/2018", Proveedor.usuario.nombre, 00, "word", "23", "Marvin", 34, 23, 23, 12, "A, B");
+            formEspera.Close();
+        }
+
+        private void btnPDFDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososVigentes(tblResultado, "27/06/2018", Proveedor.usuario.nombre, 00, "pdf", "23", "Marvin", 34, 23, 23, 12, "A, B");
+            formEspera.Close();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososVigentes(tblResultado, "asdad", Proveedor.usuario.nombre, 4324, "print", "23", "Marvin", 34, 23, 23, 12, "A, B");
+            formEspera.Close();
         }
     }
 }

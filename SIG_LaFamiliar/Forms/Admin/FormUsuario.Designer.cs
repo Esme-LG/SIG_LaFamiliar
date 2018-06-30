@@ -48,6 +48,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.pnlPrincipal.SuspendLayout();
@@ -157,6 +158,7 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.btnEliminar);
             this.pnlPrincipal.Controls.Add(this.lblRol);
             this.pnlPrincipal.Controls.Add(this.lblContra);
             this.pnlPrincipal.Controls.Add(this.lblCorreo);
@@ -215,6 +217,7 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -227,6 +230,7 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cmbRol
             // 
@@ -234,8 +238,6 @@
             this.cmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRol.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Items.AddRange(new object[] {
-            "Seleccionar..."});
             this.cmbRol.Location = new System.Drawing.Point(483, 76);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(155, 27);
@@ -287,6 +289,20 @@
             this.lblTitulo.TabIndex = 29;
             this.lblTitulo.Text = "Nuevo usuario";
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.AutoSize = true;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(584, 203);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 29);
+            this.btnEliminar.TabIndex = 40;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Visible = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +326,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormInicioAdmin_FormClosed);
+            this.Load += new System.EventHandler(this.FormUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.pnlPrincipal.ResumeLayout(false);
@@ -339,5 +356,6 @@
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

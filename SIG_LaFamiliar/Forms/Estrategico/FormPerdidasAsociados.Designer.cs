@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPerdidasAsociados));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnRecuperacion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnMorosos = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -39,19 +43,20 @@
             this.btnPerdidasAsociados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pnlEspacio = new System.Windows.Forms.Panel();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.tblResultado = new System.Windows.Forms.DataGridView();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.pnlParams = new System.Windows.Forms.Panel();
-            this.cmbMes = new System.Windows.Forms.ComboBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblInicio = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.cmbAnio = new System.Windows.Forms.ComboBox();
-            this.lblPeriodo = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).BeginInit();
             this.pnlParams.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,15 +199,67 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.tblResultado);
             this.pnlPrincipal.Controls.Add(this.btnExcel);
             this.pnlPrincipal.Controls.Add(this.btnWordDoc);
             this.pnlPrincipal.Controls.Add(this.btnPDFDoc);
             this.pnlPrincipal.Controls.Add(this.btnImprimir);
-            this.pnlPrincipal.Location = new System.Drawing.Point(176, 218);
+            this.pnlPrincipal.Location = new System.Drawing.Point(176, 212);
             this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(703, 391);
             this.pnlPrincipal.TabIndex = 56;
+            // 
+            // tblResultado
+            // 
+            this.tblResultado.AllowUserToAddRows = false;
+            this.tblResultado.AllowUserToDeleteRows = false;
+            this.tblResultado.AllowUserToResizeColumns = false;
+            this.tblResultado.AllowUserToResizeRows = false;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.tblResultado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblResultado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.tblResultado.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblResultado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.tblResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblResultado.DefaultCellStyle = dataGridViewCellStyle23;
+            this.tblResultado.Location = new System.Drawing.Point(40, 72);
+            this.tblResultado.MultiSelect = false;
+            this.tblResultado.Name = "tblResultado";
+            this.tblResultado.RowHeadersVisible = false;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            this.tblResultado.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tblResultado.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tblResultado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblResultado.Size = new System.Drawing.Size(629, 261);
+            this.tblResultado.TabIndex = 58;
             // 
             // btnExcel
             // 
@@ -215,6 +272,7 @@
             this.btnExcel.Size = new System.Drawing.Size(30, 32);
             this.btnExcel.TabIndex = 4;
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnWordDoc
             // 
@@ -227,6 +285,7 @@
             this.btnWordDoc.Size = new System.Drawing.Size(30, 32);
             this.btnWordDoc.TabIndex = 5;
             this.btnWordDoc.UseVisualStyleBackColor = true;
+            this.btnWordDoc.Click += new System.EventHandler(this.btnWordDoc_Click);
             // 
             // btnPDFDoc
             // 
@@ -239,6 +298,7 @@
             this.btnPDFDoc.Size = new System.Drawing.Size(30, 32);
             this.btnPDFDoc.TabIndex = 5;
             this.btnPDFDoc.UseVisualStyleBackColor = true;
+            this.btnPDFDoc.Click += new System.EventHandler(this.btnPDFDoc_Click);
             // 
             // btnImprimir
             // 
@@ -251,14 +311,14 @@
             this.btnImprimir.Size = new System.Drawing.Size(30, 32);
             this.btnImprimir.TabIndex = 6;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // pnlParams
             // 
             this.pnlParams.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlParams.Controls.Add(this.cmbMes);
+            this.pnlParams.Controls.Add(this.dtpFecha);
+            this.pnlParams.Controls.Add(this.lblInicio);
             this.pnlParams.Controls.Add(this.btnBuscar);
-            this.pnlParams.Controls.Add(this.cmbAnio);
-            this.pnlParams.Controls.Add(this.lblPeriodo);
             this.pnlParams.Controls.Add(this.lblTitulo);
             this.pnlParams.Location = new System.Drawing.Point(176, 64);
             this.pnlParams.Margin = new System.Windows.Forms.Padding(2);
@@ -266,16 +326,24 @@
             this.pnlParams.Size = new System.Drawing.Size(703, 126);
             this.pnlParams.TabIndex = 55;
             // 
-            // cmbMes
+            // dtpFecha
             // 
-            this.cmbMes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMes.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMes.FormattingEnabled = true;
-            this.cmbMes.Location = new System.Drawing.Point(404, 65);
-            this.cmbMes.Name = "cmbMes";
-            this.cmbMes.Size = new System.Drawing.Size(135, 27);
-            this.cmbMes.TabIndex = 2;
+            this.dtpFecha.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(394, 63);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(116, 26);
+            this.dtpFecha.TabIndex = 67;
+            // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Location = new System.Drawing.Point(165, 68);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(223, 19);
+            this.lblInicio.TabIndex = 65;
+            this.lblInicio.Text = "Seleccione la fecha a consultar:";
             // 
             // btnBuscar
             // 
@@ -289,27 +357,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // cmbAnio
-            // 
-            this.cmbAnio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbAnio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbAnio.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAnio.FormattingEnabled = true;
-            this.cmbAnio.Location = new System.Drawing.Point(287, 65);
-            this.cmbAnio.Name = "cmbAnio";
-            this.cmbAnio.Size = new System.Drawing.Size(95, 27);
-            this.cmbAnio.TabIndex = 1;
-            // 
-            // lblPeriodo
-            // 
-            this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeriodo.Location = new System.Drawing.Point(123, 68);
-            this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(158, 19);
-            this.lblPeriodo.TabIndex = 64;
-            this.lblPeriodo.Text = "Seleccione el periodo:";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblTitulo
             // 
@@ -351,6 +399,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.pnlPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).EndInit();
             this.pnlParams.ResumeLayout(false);
             this.pnlParams.PerformLayout();
             this.ResumeLayout(false);
@@ -376,8 +425,8 @@
         private System.Windows.Forms.Panel pnlParams;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.ComboBox cmbMes;
-        private System.Windows.Forms.ComboBox cmbAnio;
-        private System.Windows.Forms.Label lblPeriodo;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label lblInicio;
+        private System.Windows.Forms.DataGridView tblResultado;
     }
 }

@@ -7,15 +7,28 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using SIG_LaFamiliar.Clases;
 
 namespace SIG_LaFamiliar
 {
     class Proveedor
     {
+        private static Usuario u;
         private static Form f;
         private static SqlConnection c;
         private static MaterialSkinManager m;
 
+        public static Usuario usuario
+        {
+            get
+            {
+                return u;
+            }
+            set
+            {
+                u = value;
+            }
+        }
 
         // Guarda el FormMain para poder mostrarlo y cerrarlo desde cualquier ventana. 
         public static Form formMain
@@ -37,7 +50,7 @@ namespace SIG_LaFamiliar
             {
                 if (c == null)
                 {
-                    //c = new SqlConnection(SIG_LaFamiliar.Properties.Settings.Default.La_FamiliarConnectionString);
+                    c = new SqlConnection(SIG_LaFamiliar.Properties.Settings.Default.Conn_Admin);
                 }
                 if (c.State == System.Data.ConnectionState.Closed)
                 {
@@ -45,6 +58,21 @@ namespace SIG_LaFamiliar
                 }
 
                 return c;
+            }
+        }
+
+        public static void switchConnection(string type)
+        {
+            c.Close();
+
+            if (type == "admin")
+            {
+                c = new SqlConnection(SIG_LaFamiliar.Properties.Settings.Default.Conn_Admin);
+            }
+
+            if (type == "app")
+            {
+                c = new SqlConnection(SIG_LaFamiliar.Properties.Settings.Default.Conn_App);
             }
         }
 

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBitacora));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.btnUsuarios = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnInicio = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -37,21 +41,21 @@
             this.btnNuevo = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnBitacora = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pnlParams = new System.Windows.Forms.Panel();
-            this.cmbUsuario = new System.Windows.Forms.ComboBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tblBitacora = new System.Windows.Forms.DataGridView();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.pnlParams.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblBitacora)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -160,8 +164,6 @@
             this.pnlParams.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlParams.Controls.Add(this.cmbUsuario);
             this.pnlParams.Controls.Add(this.lblNombre);
-            this.pnlParams.Controls.Add(this.lblFecha);
-            this.pnlParams.Controls.Add(this.dtpFecha);
             this.pnlParams.Controls.Add(this.btnBuscar);
             this.pnlParams.Controls.Add(this.lblTitulo);
             this.pnlParams.Location = new System.Drawing.Point(176, 64);
@@ -170,47 +172,15 @@
             this.pnlParams.Size = new System.Drawing.Size(703, 120);
             this.pnlParams.TabIndex = 59;
             // 
-            // cmbUsuario
-            // 
-            this.cmbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbUsuario.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(118, 59);
-            this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(268, 27);
-            this.cmbUsuario.TabIndex = 1;
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(47, 62);
+            this.lblNombre.Location = new System.Drawing.Point(163, 61);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 19);
             this.lblNombre.TabIndex = 46;
             this.lblNombre.Text = "Usuario:";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(422, 62);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(53, 19);
-            this.lblFecha.TabIndex = 45;
-            this.lblFecha.Text = "Fecha:";
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(481, 58);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.ShowUpDown = true;
-            this.dtpFecha.Size = new System.Drawing.Size(98, 26);
-            this.dtpFecha.TabIndex = 2;
-            this.dtpFecha.Value = new System.DateTime(2018, 6, 18, 16, 32, 8, 0);
             // 
             // btnBuscar
             // 
@@ -224,6 +194,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
             this.btnBuscar.TabIndex = 3;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblTitulo
             // 
@@ -239,6 +210,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.tblBitacora);
             this.panel2.Controls.Add(this.btnExcel);
             this.panel2.Controls.Add(this.btnWordDoc);
             this.panel2.Controls.Add(this.btnPDFDoc);
@@ -248,6 +220,57 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(703, 400);
             this.panel2.TabIndex = 60;
+            // 
+            // tblBitacora
+            // 
+            this.tblBitacora.AllowUserToAddRows = false;
+            this.tblBitacora.AllowUserToDeleteRows = false;
+            this.tblBitacora.AllowUserToResizeColumns = false;
+            this.tblBitacora.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblBitacora.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblBitacora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblBitacora.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.tblBitacora.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblBitacora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tblBitacora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblBitacora.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tblBitacora.Location = new System.Drawing.Point(41, 100);
+            this.tblBitacora.MultiSelect = false;
+            this.tblBitacora.Name = "tblBitacora";
+            this.tblBitacora.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblBitacora.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblBitacora.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tblBitacora.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.tblBitacora.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            this.tblBitacora.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblBitacora.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tblBitacora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblBitacora.Size = new System.Drawing.Size(629, 177);
+            this.tblBitacora.TabIndex = 47;
             // 
             // btnExcel
             // 
@@ -297,6 +320,17 @@
             this.btnImprimir.TabIndex = 7;
             this.btnImprimir.UseVisualStyleBackColor = true;
             // 
+            // cmbUsuario
+            // 
+            this.cmbUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUsuario.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(245, 58);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(268, 27);
+            this.cmbUsuario.TabIndex = 1;
+            // 
             // FormBitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,11 +355,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormInicioAdmin_FormClosed);
+            this.Load += new System.EventHandler(this.FormBitacora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.pnlParams.ResumeLayout(false);
             this.pnlParams.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblBitacora)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,8 +384,7 @@
         private System.Windows.Forms.Button btnPDFDoc;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.DataGridView tblBitacora;
         private System.Windows.Forms.ComboBox cmbUsuario;
     }
 }

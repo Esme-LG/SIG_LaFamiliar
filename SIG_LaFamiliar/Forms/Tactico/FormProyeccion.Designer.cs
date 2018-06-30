@@ -44,10 +44,6 @@
             this.lblPlan = new System.Windows.Forms.Label();
             this.lblPMora = new System.Windows.Forms.Label();
             this.lblPAsociado = new System.Windows.Forms.Label();
-            this.btnExcel = new System.Windows.Forms.Button();
-            this.btnWordDoc = new System.Windows.Forms.Button();
-            this.btnPDFDoc = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.pnlParams = new System.Windows.Forms.Panel();
             this.rdbPlazo = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdbCuota = new MaterialSkin.Controls.MaterialRadioButton();
@@ -93,11 +89,7 @@
             this.pnlPrincipal.Controls.Add(this.lblPlan);
             this.pnlPrincipal.Controls.Add(this.lblPMora);
             this.pnlPrincipal.Controls.Add(this.lblPAsociado);
-            this.pnlPrincipal.Controls.Add(this.btnExcel);
-            this.pnlPrincipal.Controls.Add(this.btnWordDoc);
-            this.pnlPrincipal.Controls.Add(this.btnPDFDoc);
-            this.pnlPrincipal.Controls.Add(this.btnImprimir);
-            this.pnlPrincipal.Font = new System.Drawing.Font("Roboto", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlPrincipal.Location = new System.Drawing.Point(178, 295);
             this.pnlPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPrincipal.Name = "pnlPrincipal";
@@ -107,22 +99,22 @@
             // lblPCuotaNueva
             // 
             this.lblPCuotaNueva.AutoSize = true;
-            this.lblPCuotaNueva.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPCuotaNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPCuotaNueva.Location = new System.Drawing.Point(509, 200);
             this.lblPCuotaNueva.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPCuotaNueva.Name = "lblPCuotaNueva";
-            this.lblPCuotaNueva.Size = new System.Drawing.Size(50, 17);
+            this.lblPCuotaNueva.Size = new System.Drawing.Size(55, 17);
             this.lblPCuotaNueva.TabIndex = 63;
             this.lblPCuotaNueva.Text = "Cuota:";
             // 
             // lblPPagosNuevo
             // 
             this.lblPPagosNuevo.AutoSize = true;
-            this.lblPPagosNuevo.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPPagosNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPPagosNuevo.Location = new System.Drawing.Point(364, 234);
             this.lblPPagosNuevo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPPagosNuevo.Name = "lblPPagosNuevo";
-            this.lblPPagosNuevo.Size = new System.Drawing.Size(195, 17);
+            this.lblPPagosNuevo.Size = new System.Drawing.Size(222, 17);
             this.lblPPagosNuevo.TabIndex = 62;
             this.lblPPagosNuevo.Text = "Cantidad de pagos restantes:";
             // 
@@ -132,7 +124,7 @@
             this.lblPagosNuevo.Depth = 0;
             this.lblPagosNuevo.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblPagosNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPagosNuevo.Location = new System.Drawing.Point(563, 230);
+            this.lblPagosNuevo.Location = new System.Drawing.Point(590, 232);
             this.lblPagosNuevo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPagosNuevo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPagosNuevo.Name = "lblPagosNuevo";
@@ -160,7 +152,7 @@
             this.lblCuotaActual.Depth = 0;
             this.lblCuotaActual.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblCuotaActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCuotaActual.Location = new System.Drawing.Point(210, 198);
+            this.lblCuotaActual.Location = new System.Drawing.Point(237, 199);
             this.lblCuotaActual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCuotaActual.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblCuotaActual.Name = "lblCuotaActual";
@@ -174,7 +166,7 @@
             this.lblPagosActual.Depth = 0;
             this.lblPagosActual.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblPagosActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPagosActual.Location = new System.Drawing.Point(210, 232);
+            this.lblPagosActual.Location = new System.Drawing.Point(237, 233);
             this.lblPagosActual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPagosActual.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblPagosActual.Name = "lblPagosActual";
@@ -213,116 +205,68 @@
             // lblNuevoPlan
             // 
             this.lblNuevoPlan.AutoSize = true;
-            this.lblNuevoPlan.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevoPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNuevoPlan.Location = new System.Drawing.Point(512, 154);
             this.lblNuevoPlan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNuevoPlan.Name = "lblNuevoPlan";
-            this.lblNuevoPlan.Size = new System.Drawing.Size(80, 17);
+            this.lblNuevoPlan.Size = new System.Drawing.Size(90, 17);
             this.lblNuevoPlan.TabIndex = 53;
             this.lblNuevoPlan.Text = "Nuevo plan";
             // 
             // lblPCuotaActual
             // 
             this.lblPCuotaActual.AutoSize = true;
-            this.lblPCuotaActual.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPCuotaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPCuotaActual.Location = new System.Drawing.Point(156, 196);
             this.lblPCuotaActual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPCuotaActual.Name = "lblPCuotaActual";
-            this.lblPCuotaActual.Size = new System.Drawing.Size(50, 17);
+            this.lblPCuotaActual.Size = new System.Drawing.Size(55, 17);
             this.lblPCuotaActual.TabIndex = 52;
             this.lblPCuotaActual.Text = "Cuota:";
             // 
             // lblPPagosActual
             // 
             this.lblPPagosActual.AutoSize = true;
-            this.lblPPagosActual.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPPagosActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPPagosActual.Location = new System.Drawing.Point(11, 234);
             this.lblPPagosActual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPPagosActual.Name = "lblPPagosActual";
-            this.lblPPagosActual.Size = new System.Drawing.Size(195, 17);
+            this.lblPPagosActual.Size = new System.Drawing.Size(222, 17);
             this.lblPPagosActual.TabIndex = 51;
             this.lblPPagosActual.Text = "Cantidad de pagos restantes:";
             // 
             // lblPlan
             // 
             this.lblPlan.AutoSize = true;
-            this.lblPlan.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlan.Location = new System.Drawing.Point(166, 154);
             this.lblPlan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlan.Name = "lblPlan";
-            this.lblPlan.Size = new System.Drawing.Size(80, 17);
+            this.lblPlan.Size = new System.Drawing.Size(89, 17);
             this.lblPlan.TabIndex = 50;
             this.lblPlan.Text = "Plan actual";
             // 
             // lblPMora
             // 
             this.lblPMora.AutoSize = true;
-            this.lblPMora.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPMora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPMora.Location = new System.Drawing.Point(65, 85);
             this.lblPMora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPMora.Name = "lblPMora";
-            this.lblPMora.Size = new System.Drawing.Size(45, 17);
+            this.lblPMora.Size = new System.Drawing.Size(49, 17);
             this.lblPMora.TabIndex = 49;
             this.lblPMora.Text = "Mora:";
             // 
             // lblPAsociado
             // 
             this.lblPAsociado.AutoSize = true;
-            this.lblPAsociado.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPAsociado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPAsociado.Location = new System.Drawing.Point(39, 45);
             this.lblPAsociado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPAsociado.Name = "lblPAsociado";
-            this.lblPAsociado.Size = new System.Drawing.Size(71, 17);
+            this.lblPAsociado.Size = new System.Drawing.Size(79, 17);
             this.lblPAsociado.TabIndex = 48;
             this.lblPAsociado.Text = "Asociado:";
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.excel;
-            this.btnExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.Location = new System.Drawing.Point(549, 11);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(30, 32);
-            this.btnExcel.TabIndex = 7;
-            this.btnExcel.UseVisualStyleBackColor = true;
-            // 
-            // btnWordDoc
-            // 
-            this.btnWordDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.word;
-            this.btnWordDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnWordDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWordDoc.Location = new System.Drawing.Point(584, 11);
-            this.btnWordDoc.Margin = new System.Windows.Forms.Padding(2);
-            this.btnWordDoc.Name = "btnWordDoc";
-            this.btnWordDoc.Size = new System.Drawing.Size(30, 32);
-            this.btnWordDoc.TabIndex = 8;
-            this.btnWordDoc.UseVisualStyleBackColor = true;
-            // 
-            // btnPDFDoc
-            // 
-            this.btnPDFDoc.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.pdf;
-            this.btnPDFDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPDFDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPDFDoc.Location = new System.Drawing.Point(618, 11);
-            this.btnPDFDoc.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPDFDoc.Name = "btnPDFDoc";
-            this.btnPDFDoc.Size = new System.Drawing.Size(30, 32);
-            this.btnPDFDoc.TabIndex = 9;
-            this.btnPDFDoc.UseVisualStyleBackColor = true;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.print;
-            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImprimir.Location = new System.Drawing.Point(652, 11);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(30, 32);
-            this.btnImprimir.TabIndex = 10;
-            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // pnlParams
             // 
@@ -358,6 +302,7 @@
             this.rdbPlazo.TabIndex = 4;
             this.rdbPlazo.Text = "Plazo restante propuesto:";
             this.rdbPlazo.UseVisualStyleBackColor = true;
+            this.rdbPlazo.CheckedChanged += new System.EventHandler(this.rdbPlazo_CheckedChanged);
             // 
             // rdbCuota
             // 
@@ -377,27 +322,27 @@
             this.rdbCuota.TabStop = true;
             this.rdbCuota.Text = "Cuota propuesta:";
             this.rdbCuota.UseVisualStyleBackColor = true;
+            this.rdbCuota.CheckedChanged += new System.EventHandler(this.rdbCuota_CheckedChanged);
             // 
             // nudPlazo
             // 
-            this.nudPlazo.DecimalPlaces = 2;
             this.nudPlazo.Enabled = false;
-            this.nudPlazo.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPlazo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPlazo.Location = new System.Drawing.Point(367, 143);
             this.nudPlazo.Margin = new System.Windows.Forms.Padding(2);
             this.nudPlazo.Maximum = new decimal(new int[] {
-            9999999,
+            999,
             0,
             0,
-            131072});
+            0});
             this.nudPlazo.Name = "nudPlazo";
-            this.nudPlazo.Size = new System.Drawing.Size(70, 26);
+            this.nudPlazo.Size = new System.Drawing.Size(70, 24);
             this.nudPlazo.TabIndex = 5;
             // 
             // nudCuota
             // 
             this.nudCuota.DecimalPlaces = 2;
-            this.nudCuota.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudCuota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCuota.Location = new System.Drawing.Point(367, 102);
             this.nudCuota.Margin = new System.Windows.Forms.Padding(2);
             this.nudCuota.Maximum = new decimal(new int[] {
@@ -406,16 +351,16 @@
             0,
             131072});
             this.nudCuota.Name = "nudCuota";
-            this.nudCuota.Size = new System.Drawing.Size(70, 26);
+            this.nudCuota.Size = new System.Drawing.Size(70, 24);
             this.nudCuota.TabIndex = 3;
             // 
             // txtCredito
             // 
-            this.txtCredito.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCredito.Location = new System.Drawing.Point(346, 59);
             this.txtCredito.Margin = new System.Windows.Forms.Padding(2);
             this.txtCredito.Name = "txtCredito";
-            this.txtCredito.Size = new System.Drawing.Size(122, 26);
+            this.txtCredito.Size = new System.Drawing.Size(122, 24);
             this.txtCredito.TabIndex = 1;
             // 
             // btnBuscar
@@ -430,6 +375,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // materialLabel3
             // 
@@ -461,11 +407,11 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(256, 15);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(191, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(208, 24);
             this.lblTitulo.TabIndex = 29;
             this.lblTitulo.Text = "Proyección de pagos";
             // 
@@ -482,7 +428,7 @@
             // 
             this.btnMorososTipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososTipo.Depth = 0;
-            this.btnMorososTipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososTipo.Location = new System.Drawing.Point(0, 329);
             this.btnMorososTipo.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososTipo.MouseState = MaterialSkin.MouseState.HOVER;
@@ -499,7 +445,7 @@
             // 
             this.btnMorososHistoricos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososHistoricos.Depth = 0;
-            this.btnMorososHistoricos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososHistoricos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososHistoricos.Location = new System.Drawing.Point(0, 283);
             this.btnMorososHistoricos.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososHistoricos.MouseState = MaterialSkin.MouseState.HOVER;
@@ -542,7 +488,7 @@
             // 
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Depth = 0;
-            this.btnInicio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.Location = new System.Drawing.Point(0, 191);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
@@ -559,7 +505,7 @@
             // 
             this.btnCreditos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreditos.Depth = 0;
-            this.btnCreditos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreditos.Location = new System.Drawing.Point(0, 467);
             this.btnCreditos.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreditos.MouseState = MaterialSkin.MouseState.HOVER;
@@ -576,7 +522,7 @@
             // 
             this.btnMorososVigentes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososVigentes.Depth = 0;
-            this.btnMorososVigentes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososVigentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososVigentes.Location = new System.Drawing.Point(0, 237);
             this.btnMorososVigentes.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososVigentes.MouseState = MaterialSkin.MouseState.HOVER;
@@ -593,7 +539,7 @@
             // 
             this.btnAsociados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAsociados.Depth = 0;
-            this.btnAsociados.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsociados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsociados.Location = new System.Drawing.Point(0, 421);
             this.btnAsociados.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsociados.MouseState = MaterialSkin.MouseState.HOVER;
@@ -610,7 +556,7 @@
             // 
             this.btnProyeccion.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnProyeccion.Depth = 0;
-            this.btnProyeccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProyeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProyeccion.Location = new System.Drawing.Point(0, 375);
             this.btnProyeccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnProyeccion.MouseState = MaterialSkin.MouseState.HOVER;
@@ -663,10 +609,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlPrincipal;
-        private System.Windows.Forms.Button btnExcel;
-        private System.Windows.Forms.Button btnWordDoc;
-        private System.Windows.Forms.Button btnPDFDoc;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Panel pnlParams;
         private MaterialSkin.Controls.MaterialRadioButton rdbPlazo;
         private MaterialSkin.Controls.MaterialRadioButton rdbCuota;

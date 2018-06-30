@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using SIG_LaFamiliar.Datos;
 
 namespace SIG_LaFamiliar.Forms.Admin
 {
@@ -53,5 +54,36 @@ namespace SIG_LaFamiliar.Forms.Admin
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
         }
 
+        private void FormUsuarios_Load(object sender, EventArgs e)
+        {
+            tblUsuarios.DataSource = DatosUsuarios.dtUsuarios();
+            tblUsuarios.Columns["UsuarioID"].Visible = false;
+
+            int ancho = tblUsuarios.Width;
+
+            tblUsuarios.Columns["Usuario"].Width = ancho * 25 / 100;
+            tblUsuarios.Columns["Nombre"].Width = ancho * 50 / 100;
+            tblUsuarios.Columns["Rol"].Width = ancho * 25 / 100;
+
+            DatosBitacora.registrar("401");
+        }
+
+        private void tblUsuarios_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                int id = (int)tblUsuarios.Rows[e.RowIndex].Cells["UsuarioID"].Value;
+                Form form = new FormUsuario(id);
+                form.Show();
+                this.Close();
+            }   
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            Form form = new FormUsuario();
+            form.Show();
+            this.Close();
+        }
     }
 }

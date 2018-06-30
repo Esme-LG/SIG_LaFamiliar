@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using SIG_LaFamiliar.Datos;
 
 namespace SIG_LaFamiliar.Forms.Tactico
 {
@@ -72,6 +73,47 @@ namespace SIG_LaFamiliar.Forms.Tactico
         private void FormMorososHistorico_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            tblResultado.DataSource = DatosTacticos.mosososHistoricos(dtpFecha.Value.Month + 46);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.ExcelDG(tblResultado, "Morosos históricos");
+            formEspera.Close();
+        }
+
+        private void btnWordDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososHistoricos(tblResultado, dtpFecha.Value.Month + 46+"", Proveedor.usuario.nombre, 00, "word", "asdas");
+            formEspera.Close();
+        }
+
+        private void btnPDFDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososHistoricos(tblResultado, dtpFecha.Value.Month + 46+"", Proveedor.usuario.nombre, 00, "pdf", "asdasd");
+            formEspera.Close();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososHistoricos(tblResultado, "asdasd", Proveedor.usuario.nombre, 1233, "print", "asad");
+            formEspera.Close();
         }
         
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using SIG_LaFamiliar.Datos;
 
 namespace SIG_LaFamiliar.Forms.Tactico
 {
@@ -72,6 +73,46 @@ namespace SIG_LaFamiliar.Forms.Tactico
         private void FormCreditosCompletados_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            tblResultado.DataSource = DatosTacticos.creditosCompletados(rdbIguales.Checked);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.ExcelDG(tblResultado, "Créditos morosos completados");
+            formEspera.Close();
+        }
+
+        private void btnWordDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososCompletados(tblResultado, "27/06/2018", Proveedor.usuario.nombre, 12312, "word", "asdasd");
+            formEspera.Close();
+        }
+
+        private void btnPDFDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+            Reportes.Reportes.morososCompletados(tblResultado, "27/06/2018", Proveedor.usuario.nombre, 12312, "pdf", "asdasd");
+            formEspera.Close();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.morososCompletados(tblResultado, "asdasd", Proveedor.usuario.nombre, 12312, "print", "asdasd");
+            formEspera.Close();
         }
 
     }

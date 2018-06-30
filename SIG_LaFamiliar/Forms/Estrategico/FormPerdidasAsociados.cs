@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using SIG_LaFamiliar.Datos;
 
 namespace SIG_LaFamiliar.Forms.Estrategico
 {
@@ -65,6 +66,47 @@ namespace SIG_LaFamiliar.Forms.Estrategico
         private void FormPerdidasAsociados_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 1 && !Proveedor.formMain.Visible) Application.Exit();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            tblResultado.DataSource = DatosEstrategicos.perdidasAsociados(dtpFecha.Value.Month + 44);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.ExcelDG(tblResultado, "Pérdidas por asociados morosos");
+            formEspera.Close();
+        }
+
+        private void btnWordDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.docE3Estrategico(tblResultado, dtpFecha.Value.Month + 44 + " ", Proveedor.usuario.nombre, 1233, "word");
+            formEspera.Close();
+        }
+
+        private void btnPDFDoc_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.docE3Estrategico(tblResultado, dtpFecha.Value.Month + 44+"", Proveedor.usuario.nombre, 1233, "pdf");
+            formEspera.Close();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Form formEspera = new FormEspera();
+            formEspera.Show();
+
+            Reportes.Reportes.docE3Estrategico(tblResultado, "jasdas", "asdas", 1233, "print");
+            formEspera.Close();
         }
     }
 }

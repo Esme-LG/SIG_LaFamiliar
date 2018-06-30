@@ -1,7 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SIG_LaFamiliar.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Conn_Admin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=EMERSON-IRAHETA;Network Library=DBMSSOCN;Initial Catalog="La Familiar SIG";Integrated Security=SSPI;User ID=LF_ADMIN;Password=lf_admin_115;</Value>
+    </Setting>
+    <Setting Name="Conn_App" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=EMERSON-IRAHETA;Network Library=DBMSSOCN;Initial Catalog="La Familiar SIG";Integrated Security=SSPI;User ID=LF_APP;Password=lf_app_115;</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

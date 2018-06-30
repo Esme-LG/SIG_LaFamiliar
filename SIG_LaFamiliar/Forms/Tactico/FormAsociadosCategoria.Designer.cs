@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAsociadosCategoria));
             this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.tblResultado = new System.Windows.Forms.DataGridView();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnWordDoc = new System.Windows.Forms.Button();
             this.btnPDFDoc = new System.Windows.Forms.Button();
@@ -41,10 +46,6 @@
             this.ckbOpcionB = new MaterialSkin.Controls.MaterialCheckBox();
             this.ckbOpcionA = new MaterialSkin.Controls.MaterialCheckBox();
             this.lblCategoria = new MaterialSkin.Controls.MaterialLabel();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.lblNombre = new MaterialSkin.Controls.MaterialLabel();
-            this.lblId = new MaterialSkin.Controls.MaterialLabel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlEspacio = new System.Windows.Forms.Panel();
@@ -58,6 +59,7 @@
             this.btnAsociados = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnProyeccion = new MaterialSkin.Controls.MaterialRaisedButton();
             this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).BeginInit();
             this.pnlParams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -66,6 +68,7 @@
             // pnlPrincipal
             // 
             this.pnlPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlPrincipal.Controls.Add(this.tblResultado);
             this.pnlPrincipal.Controls.Add(this.btnExcel);
             this.pnlPrincipal.Controls.Add(this.btnWordDoc);
             this.pnlPrincipal.Controls.Add(this.btnPDFDoc);
@@ -75,6 +78,57 @@
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(703, 367);
             this.pnlPrincipal.TabIndex = 54;
+            // 
+            // tblResultado
+            // 
+            this.tblResultado.AllowUserToAddRows = false;
+            this.tblResultado.AllowUserToDeleteRows = false;
+            this.tblResultado.AllowUserToResizeColumns = false;
+            this.tblResultado.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblResultado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblResultado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.tblResultado.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblResultado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tblResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblResultado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tblResultado.Location = new System.Drawing.Point(36, 70);
+            this.tblResultado.MultiSelect = false;
+            this.tblResultado.Name = "tblResultado";
+            this.tblResultado.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tblResultado.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tblResultado.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            this.tblResultado.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.tblResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tblResultado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tblResultado.Size = new System.Drawing.Size(629, 261);
+            this.tblResultado.TabIndex = 68;
             // 
             // btnExcel
             // 
@@ -87,6 +141,7 @@
             this.btnExcel.Size = new System.Drawing.Size(30, 32);
             this.btnExcel.TabIndex = 9;
             this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
             // 
             // btnWordDoc
             // 
@@ -99,6 +154,7 @@
             this.btnWordDoc.Size = new System.Drawing.Size(30, 32);
             this.btnWordDoc.TabIndex = 10;
             this.btnWordDoc.UseVisualStyleBackColor = true;
+            this.btnWordDoc.Click += new System.EventHandler(this.btnWordDoc_Click);
             // 
             // btnPDFDoc
             // 
@@ -111,6 +167,7 @@
             this.btnPDFDoc.Size = new System.Drawing.Size(30, 32);
             this.btnPDFDoc.TabIndex = 11;
             this.btnPDFDoc.UseVisualStyleBackColor = true;
+            this.btnPDFDoc.Click += new System.EventHandler(this.btnPDFDoc_Click);
             // 
             // btnImprimir
             // 
@@ -123,6 +180,7 @@
             this.btnImprimir.Size = new System.Drawing.Size(30, 32);
             this.btnImprimir.TabIndex = 12;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // pnlParams
             // 
@@ -133,10 +191,6 @@
             this.pnlParams.Controls.Add(this.ckbOpcionB);
             this.pnlParams.Controls.Add(this.ckbOpcionA);
             this.pnlParams.Controls.Add(this.lblCategoria);
-            this.pnlParams.Controls.Add(this.txtNombre);
-            this.pnlParams.Controls.Add(this.txtID);
-            this.pnlParams.Controls.Add(this.lblNombre);
-            this.pnlParams.Controls.Add(this.lblId);
             this.pnlParams.Controls.Add(this.btnBuscar);
             this.pnlParams.Controls.Add(this.lblTitulo);
             this.pnlParams.Location = new System.Drawing.Point(172, 64);
@@ -148,10 +202,12 @@
             // ckbOpcionF
             // 
             this.ckbOpcionF.AutoSize = true;
+            this.ckbOpcionF.Checked = true;
+            this.ckbOpcionF.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbOpcionF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbOpcionF.Depth = 0;
             this.ckbOpcionF.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ckbOpcionF.Location = new System.Drawing.Point(410, 110);
+            this.ckbOpcionF.Location = new System.Drawing.Point(441, 77);
             this.ckbOpcionF.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionF.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ckbOpcionF.MouseState = MaterialSkin.MouseState.HOVER;
@@ -165,10 +221,12 @@
             // ckbOpcionD
             // 
             this.ckbOpcionD.AutoSize = true;
+            this.ckbOpcionD.Checked = true;
+            this.ckbOpcionD.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbOpcionD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbOpcionD.Depth = 0;
             this.ckbOpcionD.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ckbOpcionD.Location = new System.Drawing.Point(360, 110);
+            this.ckbOpcionD.Location = new System.Drawing.Point(386, 77);
             this.ckbOpcionD.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionD.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ckbOpcionD.MouseState = MaterialSkin.MouseState.HOVER;
@@ -182,10 +240,12 @@
             // ckbOpcionC
             // 
             this.ckbOpcionC.AutoSize = true;
+            this.ckbOpcionC.Checked = true;
+            this.ckbOpcionC.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbOpcionC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbOpcionC.Depth = 0;
             this.ckbOpcionC.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ckbOpcionC.Location = new System.Drawing.Point(310, 110);
+            this.ckbOpcionC.Location = new System.Drawing.Point(328, 77);
             this.ckbOpcionC.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionC.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ckbOpcionC.MouseState = MaterialSkin.MouseState.HOVER;
@@ -199,10 +259,12 @@
             // ckbOpcionB
             // 
             this.ckbOpcionB.AutoSize = true;
+            this.ckbOpcionB.Checked = true;
+            this.ckbOpcionB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbOpcionB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbOpcionB.Depth = 0;
             this.ckbOpcionB.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ckbOpcionB.Location = new System.Drawing.Point(260, 110);
+            this.ckbOpcionB.Location = new System.Drawing.Point(271, 77);
             this.ckbOpcionB.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionB.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ckbOpcionB.MouseState = MaterialSkin.MouseState.HOVER;
@@ -216,10 +278,12 @@
             // ckbOpcionA
             // 
             this.ckbOpcionA.AutoSize = true;
+            this.ckbOpcionA.Checked = true;
+            this.ckbOpcionA.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbOpcionA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbOpcionA.Depth = 0;
             this.ckbOpcionA.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ckbOpcionA.Location = new System.Drawing.Point(210, 110);
+            this.ckbOpcionA.Location = new System.Drawing.Point(215, 77);
             this.ckbOpcionA.Margin = new System.Windows.Forms.Padding(0);
             this.ckbOpcionA.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ckbOpcionA.MouseState = MaterialSkin.MouseState.HOVER;
@@ -236,7 +300,7 @@
             this.lblCategoria.Depth = 0;
             this.lblCategoria.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblCategoria.Location = new System.Drawing.Point(131, 115);
+            this.lblCategoria.Location = new System.Drawing.Point(118, 81);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCategoria.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblCategoria.Name = "lblCategoria";
@@ -244,73 +308,28 @@
             this.lblCategoria.TabIndex = 48;
             this.lblCategoria.Text = "Categoría:";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(467, 63);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(163, 26);
-            this.txtNombre.TabIndex = 2;
-            // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(195, 63);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(108, 26);
-            this.txtID.TabIndex = 1;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Depth = 0;
-            this.lblNombre.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblNombre.Location = new System.Drawing.Point(330, 66);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNombre.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(133, 19);
-            this.lblNombre.TabIndex = 45;
-            this.lblNombre.Text = "Nombre asociado:";
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Depth = 0;
-            this.lblId.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblId.Location = new System.Drawing.Point(87, 66);
-            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblId.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(93, 19);
-            this.lblId.TabIndex = 44;
-            this.lblId.Text = "ID asociado:";
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.btnBuscar.BackgroundImage = global::SIG_LaFamiliar.Properties.Resources.magnifier;
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Location = new System.Drawing.Point(549, 109);
+            this.btnBuscar.Location = new System.Drawing.Point(549, 75);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(30, 32);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(242, 15);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(220, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(236, 24);
             this.lblTitulo.TabIndex = 29;
             this.lblTitulo.Text = "Asociados por categoría";
             // 
@@ -327,7 +346,7 @@
             // 
             this.btnMorososTipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososTipo.Depth = 0;
-            this.btnMorososTipo.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososTipo.Location = new System.Drawing.Point(0, 329);
             this.btnMorososTipo.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososTipo.MouseState = MaterialSkin.MouseState.HOVER;
@@ -344,7 +363,7 @@
             // 
             this.btnMorososHistoricos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososHistoricos.Depth = 0;
-            this.btnMorososHistoricos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososHistoricos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososHistoricos.Location = new System.Drawing.Point(0, 283);
             this.btnMorososHistoricos.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososHistoricos.MouseState = MaterialSkin.MouseState.HOVER;
@@ -387,7 +406,7 @@
             // 
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Depth = 0;
-            this.btnInicio.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.Location = new System.Drawing.Point(0, 191);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.MouseState = MaterialSkin.MouseState.HOVER;
@@ -404,7 +423,7 @@
             // 
             this.btnCreditos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreditos.Depth = 0;
-            this.btnCreditos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreditos.Location = new System.Drawing.Point(0, 467);
             this.btnCreditos.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreditos.MouseState = MaterialSkin.MouseState.HOVER;
@@ -421,7 +440,7 @@
             // 
             this.btnMorososVigentes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMorososVigentes.Depth = 0;
-            this.btnMorososVigentes.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMorososVigentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMorososVigentes.Location = new System.Drawing.Point(0, 237);
             this.btnMorososVigentes.Margin = new System.Windows.Forms.Padding(2);
             this.btnMorososVigentes.MouseState = MaterialSkin.MouseState.HOVER;
@@ -438,7 +457,7 @@
             // 
             this.btnAsociados.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnAsociados.Depth = 0;
-            this.btnAsociados.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsociados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsociados.Location = new System.Drawing.Point(0, 421);
             this.btnAsociados.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsociados.MouseState = MaterialSkin.MouseState.HOVER;
@@ -454,7 +473,7 @@
             // 
             this.btnProyeccion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProyeccion.Depth = 0;
-            this.btnProyeccion.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProyeccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProyeccion.Location = new System.Drawing.Point(0, 375);
             this.btnProyeccion.Margin = new System.Windows.Forms.Padding(2);
             this.btnProyeccion.MouseState = MaterialSkin.MouseState.HOVER;
@@ -494,6 +513,7 @@
             this.Text = "Sistema de Información Gerencial para el Apoyo al Análisis de la Morosidad";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormAsociadosCategoria_FormClosed);
             this.pnlPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tblResultado)).EndInit();
             this.pnlParams.ResumeLayout(false);
             this.pnlParams.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
@@ -516,10 +536,6 @@
         private MaterialSkin.Controls.MaterialCheckBox ckbOpcionB;
         private MaterialSkin.Controls.MaterialCheckBox ckbOpcionA;
         private MaterialSkin.Controls.MaterialLabel lblCategoria;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtID;
-        private MaterialSkin.Controls.MaterialLabel lblNombre;
-        private MaterialSkin.Controls.MaterialLabel lblId;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel pnlEspacio;
@@ -532,5 +548,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnMorososVigentes;
         private MaterialSkin.Controls.MaterialRaisedButton btnAsociados;
         private MaterialSkin.Controls.MaterialRaisedButton btnProyeccion;
+        private System.Windows.Forms.DataGridView tblResultado;
     }
 }
